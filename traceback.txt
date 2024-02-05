@@ -1,0 +1,22 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/week_0.rpy", line 48, in script
+    jump week_1
+ScriptError: could not find label 'week_1'.
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/week_0.rpy", line 48, in script
+    jump week_1
+  File "C:\Users\lowda\Downloads\renpy-8.2.0-sdk.7z\renpy-8.2.0-sdk\renpy\ast.py", line 1698, in execute
+    rv = renpy.game.script.lookup(target)
+  File "C:\Users\lowda\Downloads\renpy-8.2.0-sdk.7z\renpy-8.2.0-sdk\renpy\script.py", line 1103, in lookup
+    raise ScriptError("could not find label '%s'." % str(original))
+ScriptError: could not find label 'week_1'.
+
+Windows-10-10.0.19045 AMD64
+Ren'Py 8.2.0.24012702
+International Serious Game 1.0
+Mon Feb  5 15:23:51 2024
