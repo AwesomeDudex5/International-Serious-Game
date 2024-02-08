@@ -8,6 +8,7 @@ init offset = -1
 ################################################################################
 ## Styles
 ################################################################################
+   
 
 style default:
     properties gui.text_properties()
@@ -94,6 +95,35 @@ style frame:
 ## and id "window" to apply style properties.
 ##
 ## https://www.renpy.org/doc/html/screen_special.html#say
+
+#show stats
+screen pressure_display():
+    text "Pressure: [pressure]" xpos 0.8 ypos 0.1 size 30  # Adjust text size as needed  
+    text "Action Points: [current_action_points] / [max_action_points]" xpos 0.8 ypos 0.2 size 30
+    text "Language Skill: [language_skill]" xpos 0.8 ypos 0.3 size 30
+    text "Knowledge: [study]" xpos 0.8 ypos 0.4 size 30
+
+#Show Week as chapter
+screen week_1_screen():
+    text "WEEK 1" xalign 0.5 yalign 0.5
+    textbutton "Start Week":        
+        xalign 0.5
+        yalign 0.6
+        action Return()  
+
+screen week_2_screen():
+    text "WEEK 2" xalign 0.5 yalign 0.5
+    textbutton "Start Week":        
+        xalign 0.5
+        yalign 0.6
+        action Return()
+
+screen week_3_screen():
+    text "WEEK 3" xalign 0.5 yalign 0.5
+    textbutton "Start Week":        
+        xalign 0.5
+        yalign 0.6
+        action Return()    
 
 screen say(who, what):
     style_prefix "say"

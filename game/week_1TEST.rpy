@@ -1,6 +1,6 @@
 
 
-label week_1:
+label wwwwww:
 
     scene background 1
     play music "audio/Liyue.mp3"
@@ -24,11 +24,19 @@ label choice_one:
     show peter normal
     p "I played Blue Archive"
     p "My Pressure is: [pressure]"
+    jump pressure_check
 
 label choice_two:
     show peter rich
     p "I played Palworld"
     p "My pressure is: [pressure]"
+    jump pressure_check
+
+label pressure_check:
+    if pressure > 0:
+        p "You suck"
+    else:
+        p "Y** s***"
 
 return
 
