@@ -4,7 +4,10 @@
 #---VARIABLES---
 define Peter = Character("Peter", color="68a24b")
 define Bill = Character("Bill", color="#4397fa")
+define Mom = Character("Mom", color="#e011be" )
+define Dad = Character("Dad", color="#331b9e")
 default pressure = 0
+default max_pressure = 20
 default max_action_points = 50
 default current_action_points = 50
 default study = 0
@@ -16,14 +19,14 @@ label start:
     jump week_1_screen_display
 
 label week_1_screen_display:
-    scene background 1
+    scene background school
     call screen week_1_screen
     jump week_1_start
 
 
 #Start of the dialogue
 label week_1_start:
-    scene background 1
+    scene background school
     show peter normal
     show screen pressure_display
     Peter "Wow, this is our school, it’s soo big! It took me ages to find my dorm! I remember Bill should be around here... uhh, kinda struggling to make sense of this map."
@@ -53,12 +56,14 @@ label week_1_continue:
     show bill normal at right
     Bill "Oh, thank goodness you're here, Peter! Long time no see!"
 
-    Character("Mom") "Hello Bill! Long time no see. You look very energetic!"
+    show mom normal
+    Mom "Hello Bill! Long time no see. You look very energetic!"
 
     show bill normal
     Bill "Hello Mr. X and Mr. X! Yeah, it's been ages! You haven't been here for long, have you? How's it going?"
 
     show peter normal
+    hide mom normal
     Peter "Uhh... hard to say. I didn't realize how rusty my language skills were until I landed."
 
     show bill normal
@@ -90,11 +95,15 @@ label week_1_continue:
     hide sample map
     show peter normal at left
     Peter "Thanks, Bill! It's helpful to have a guide. Anything else I should know about?"
+    jump week_1_gym_scene
+
+label week_1_gym_scene:
+    scene background gym
 
     show bill normal at right
     Bill "Of course! There's the sports complex where you can hit the gym or join recreational activities. And if you ever need assistance, the student services office is in the administration building. They're really helpful with any questions you might have."
 
-    show peter normal
+    show peter normal at left
     Peter "Appreciate it, Bill! I'm sure with your guidance, I'll navigate this campus in no time."
 
     show bill normal
@@ -114,18 +123,23 @@ label week_1_continue:
 
     show peter normal
     Peter "Ok, See you later!"
+    jump week_1_store_event
 
+
+label week_1_store_event:
+    scene background store
     hide peter normal
     hide bill normal
     "(Peter's parents decided to help him settle into his new place, so they headed to the supermarket.)"
 
-    Character("Mom") "Peter, What do these classifications mean? I can't read the labels here. Which of these milks is better?"
+    show mom normal at right
+    Mom "Peter, What do these classifications mean? I can't read the labels here. Which of these milks is better?"
 
-    show peter normal
+    show peter normal at left
     Peter "The labels mean... uh, whole milk and semi-skimmed milk. I'm not sure which one is better, we usually don't pay much attention to this back home."
 
-    Character("Mom") "Hello? Do you have...(talking with a supermarket staff)"
-    Character("Mom") "Peter, can you ask if they have Pasteurized Eggs? I'm not sure how to say Pasteurized Eggs in this language."
+    Mom "Hello? Do you have...(talking with a supermarket staff)"
+    Mom "Peter, can you ask if they have Pasteurized Eggs? I'm not sure how to say Pasteurized Eggs in this language."
 
     Peter "Ah, of course....Um... do you have...."
 
@@ -135,7 +149,8 @@ menu:
         $ pressure += 1
         jump week_1_continue_continue
     "(Look up how to say 'Pasteurized Eggs' online.)":
-        Character("Mom") "Hurry up!"
+        show mom normal
+        Mom "Hurry up!"
         "pressure++"
         $ pressure += 2
         jump week_1_continue_continue
@@ -143,31 +158,35 @@ menu:
         jump week_1_continue_continue
 
 label week_1_continue_continue:
-    scene background 1
+    scene background store
 
     Character("Super Market Staff") "The….ohh, you mean P******ed Eggs, right?"
 
-    show peter normal
+    show peter normal at left
     Peter "The ... .what? Uhh…Yes? Maybe?"
 
     hide peter normal
     Character("Super Market Staff") "It’s ok, let me show you. This way!"
 
-    Character("Mom") "Great! Still relying on you! Your Language Skill is really good! What's that word called?"
+    show mom normal at right
+    Mom "Great! Still relying on you! Your Language Skill is really good! What's that word called?"
 
     show peter normal
     Peter "Uhh..."
 
     hide peter normal
+    hide mom normal
     
 menu:
     "'Pesterized?' Eggs, Mom!":
-        Character("Mom") "Awesome, learned a new word!"
+        show mom normal
+        Mom "Awesome, learned a new word!"
         "pressure+"
         $ pressure += 1
         jump week_1_event_2
     "I don't know mom... I didn't hear clearly":
-        Character("Mom") "Ah? Haven't you already passed language exams? Is he leading us to the right 
+        show mom normal
+        Mom "Ah? Haven't you already passed language exams? Is he leading us to the right 
         place? Is it what we're looking for? You need to clarify!"
         "pressure++"
         $ pressure += 2
@@ -176,17 +195,19 @@ menu:
         jump week_1_event_2
 
 label week_1_event_2:
-    scene background 2
+    scene background room
     "(The next day)"
 
-    Character("Father") "Have you checked the requirements for your major? Do you need a project or paper to graduate? What courses has the school scheduled for you this semester?"
+    show dad normal at right
+    Dad "Have you checked the requirements for your major? Do you need a project or paper to graduate? What courses has the school scheduled for you this semester?"
 
-    show peter normal  # Show Peter's sprite for his response
+    show peter normal at left
     Peter "My major doesn’t require a project or paper to graduate dad. It’s different from our country. And the school doesn’t schedule courses for us, we need to select classes."
 
-    Character("Father") "What? That sounds weird. Are you sure? And what class did you select?"
+    Dad "What? That sounds weird. Are you sure? And what class did you select?"
 
     hide peter normal
+    hide dad normal
 
 menu:
     "Spend time to learn the major requirement, see the hidden information, select the right courses.":
