@@ -3,7 +3,7 @@
 
 #---VARIABLES---
 define Peter = Character("Peter", color="68a24b")
-define Bill = Character("Bill", color="#4397fa")
+define Bill = Character("Andy", color="#4397fa")
 define Mom = Character("Mom", color="#e011be" )
 define Dad = Character("Dad", color="#331b9e")
 default pressure = 0
