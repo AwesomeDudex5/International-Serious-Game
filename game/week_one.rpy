@@ -29,6 +29,7 @@ label week_1_start:
     scene background school
     show peter normal
     show screen pressure_display
+    show screen mapPopoUp
     Peter "Wow, this is our school, it’s soo big! It took me ages to find my dorm! I remember Bill should be around here... uhh, kinda struggling to make sense of this map."
     Peter "Hello, excuse me, how do I get to this location?"
  
