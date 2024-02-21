@@ -29,7 +29,6 @@ label week_1_start:
     scene background school
     show peter normal
     show screen pressure_display
-    show screen mapPopoUp
     Peter "Wow, this is our school, it’s soo big! It took me ages to find my dorm! I remember Bill should be around here... uhh, kinda struggling to make sense of this map."
     Peter "Hello, excuse me, how do I get to this location?"
  
@@ -210,6 +209,9 @@ label week_1_event_2:
     hide peter normal
     hide dad normal
 
+
+
+
 menu:
     "Spend time to learn the major requirement, see the hidden information, select the right courses.":
         "Action Point - -, Study ++, Language Skill +, pressure +"
@@ -217,15 +219,22 @@ menu:
         $ study += 2
         $ language_skill += 1
         $ pressure += 1
-        jump week_2_start
+        #jump week_2_start
+        jump weekWeekend
     "Talk with your major advisor":
         "Action Point -, Study +, Language Skill +"
         $ current_action_points -= 1
         $ study += 1
         $language_skill += 1
-        jump week_2_start
+        jump weekWeekend
     "Ignore it.":
-        jump week_2_start
+        jump weekWeekend
+
+label weekWeekend:
+    show screen mapPopoUp
+    
+
+
 
 
 return

@@ -155,7 +155,7 @@ screen showmap():
     add"images/sample map.png"
 
     imagebutton:
-        xalign 0
+        xalign 0.5
         yalign 1
         xoffset -5
         yoffset 5

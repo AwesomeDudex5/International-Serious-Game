@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/screens.rpy", line 163: the action keyword argument was not given a value.
-    action return()
-           ^
+File "game/screens.rpy", line 156: Line is indented, but the preceding add statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
+    xoffset 0
+    ^
 
 Ren'Py Version: Ren'Py 8.2.0.24012702
-Tue Feb 20 16:31:36 2024
+Tue Feb 20 16:36:40 2024
