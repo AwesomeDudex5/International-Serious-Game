@@ -196,6 +196,7 @@ menu:
 
 label week_1_event_2:
     scene background room
+    
     "(The next day)"
 
     show dad normal at right
@@ -219,22 +220,29 @@ menu:
         $ study += 2
         $ language_skill += 1
         $ pressure += 1
-        #jump week_2_start
-        jump weekWeekend
+        jump menuintroduction
     "Talk with your major advisor":
         "Action Point -, Study +, Language Skill +"
         $ current_action_points -= 1
         $ study += 1
         $language_skill += 1
-        jump weekWeekend
+        jump menuintroduction
     "Ignore it.":
-        jump weekWeekend
+        jump menuintroduction
 
-label weekWeekend:
-    show screen mapPopoUp
-    
+label menuintroduction:
+    scene background room
+
+    show dad normal at right
+
+    Dad "If you want to outside for relaxing, we can go just remember telling us. we are family."
+    call screen mapPopoUp()
 
 
+
+
+
+    #jump week_2_start
 
 
 return
