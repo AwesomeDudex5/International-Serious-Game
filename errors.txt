@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/Menupopupfunction.rpy", line 37: Line is indented, but the preceding hover statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
-    xzoom 2.0
-    ^
+File "game/Menupopupfunction.rpy", line 3: expected 'image_name_component' not found.
+    image
+         ^
 
 Ren'Py Version: Ren'Py 8.2.0.24012702
-Sun Feb 25 13:46:30 2024
+Wed Feb 28 10:45:47 2024

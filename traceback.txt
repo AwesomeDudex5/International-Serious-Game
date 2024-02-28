@@ -1,43 +1,35 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/week_one.rpy", line 33, in script
-    Peter "Wow, this is our school, it’s soo big! It took me ages to find my dorm! I remember Bill should be around here... uhh, kinda struggling to make sense of this map."
-  File "renpy/common/000window.rpy", line 122, in _window_auto_callback
-    _window_show(auto=True)
-  File "renpy/common/000window.rpy", line 70, in _window_show
-    renpy.with_statement(trans)
-  File "game/screens.rpy", line 146, in execute
-    screen mapPopoUp():
-  File "game/screens.rpy", line 146, in execute
-    screen mapPopoUp():
-  File "game/screens.rpy", line 147, in execute
+  File "renpy/common/00gamemenu.rpy", line 174, in script
+    $ ui.interact()
+  File "renpy/common/00gamemenu.rpy", line 174, in <module>
+    $ ui.interact()
+  File "game/Menupopupfunction.rpy", line 15, in execute
+    screen showmap():
+  File "game/Menupopupfunction.rpy", line 15, in execute
+    screen showmap():
+  File "game/Menupopupfunction.rpy", line 27, in execute
     imagebutton:
-  File "game/screens.rpy", line 147, in keywords
+  File "game/Menupopupfunction.rpy", line 27, in keywords
     imagebutton:
-  File "game/screens.rpy", line 153, in <module>
-    action ShowMenu(showmap)
-NameError: name 'showmap' is not defined
+  File "game/Menupopupfunction.rpy", line 34, in <module>
+    idle dorm
+NameError: name 'dorm' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/week_one.rpy", line 33, in script
-    Peter "Wow, this is our school, it’s soo big! It took me ages to find my dorm! I remember Bill should be around here... uhh, kinda struggling to make sense of this map."
-  File "E:\renpy-8.2.0-sdk\renpy\ast.py", line 2557, in execute
-    Say.execute(self)
-  File "E:\renpy-8.2.0-sdk\renpy\ast.py", line 583, in execute
-    statement_name(stmt_name)
-  File "E:\renpy-8.2.0-sdk\renpy\ast.py", line 52, in statement_name
-    i(name)
-  File "renpy/common/000window.rpy", line 122, in _window_auto_callback
-    _window_show(auto=True)
-  File "renpy/common/000window.rpy", line 70, in _window_show
-    renpy.with_statement(trans)
-  File "E:\renpy-8.2.0-sdk\renpy\exports.py", line 1781, in with_statement
-    return renpy.game.interface.do_with(trans, paired, clear=clear)
-  File "E:\renpy-8.2.0-sdk\renpy\display\core.py", line 1548, in do_with
-    return self.interact(trans_pause=True,
+  File "renpy/common/00gamemenu.rpy", line 174, in script
+    $ ui.interact()
+  File "E:\renpy-8.2.0-sdk\renpy\ast.py", line 823, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "E:\renpy-8.2.0-sdk\renpy\python.py", line 1178, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "renpy/common/00gamemenu.rpy", line 174, in <module>
+    $ ui.interact()
+  File "E:\renpy-8.2.0-sdk\renpy\ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
   File "E:\renpy-8.2.0-sdk\renpy\display\core.py", line 2165, in interact
     repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
   File "E:\renpy-8.2.0-sdk\renpy\display\core.py", line 2683, in interact_core
@@ -57,19 +49,19 @@ Full traceback:
     self.update()
   File "E:\renpy-8.2.0-sdk\renpy\display\screen.py", line 697, in update
     self.screen.function(**self.scope)
-  File "game/screens.rpy", line 146, in execute
-    screen mapPopoUp():
-  File "game/screens.rpy", line 146, in execute
-    screen mapPopoUp():
-  File "game/screens.rpy", line 147, in execute
+  File "game/Menupopupfunction.rpy", line 15, in execute
+    screen showmap():
+  File "game/Menupopupfunction.rpy", line 15, in execute
+    screen showmap():
+  File "game/Menupopupfunction.rpy", line 27, in execute
     imagebutton:
-  File "game/screens.rpy", line 147, in keywords
+  File "game/Menupopupfunction.rpy", line 27, in keywords
     imagebutton:
-  File "game/screens.rpy", line 153, in <module>
-    action ShowMenu(showmap)
-NameError: name 'showmap' is not defined
+  File "game/Menupopupfunction.rpy", line 34, in <module>
+    idle dorm
+NameError: name 'dorm' is not defined
 
 Windows-10-10.0.22621 AMD64
 Ren'Py 8.2.0.24012702
 International Serious Game 1.0
-Tue Feb 20 16:29:21 2024
+Wed Feb 28 10:46:06 2024
