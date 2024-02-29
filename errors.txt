@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/week_one.rpy", line 84: Line is indented, but the preceding show statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
-    xalign 0.5 yalign 0.5
-    ^
+File "game/screens.rpy", line 172: end of line expected.
+    frame:5
+          ^
 
 Ren'Py Version: Ren'Py 8.2.0.24012702
-Thu Feb  8 02:17:13 2024
+Thu Feb 29 05:49:21 2024

@@ -109,25 +109,128 @@ screen peter_backstory_screen():
 
 #Show Week as chapter
 screen week_1_screen():
-    text "WEEK 1" xalign 0.5 yalign 0.5
-    textbutton "Start Week":        
-        xalign 0.5
-        yalign 0.6
-        action Return()  
-
+    frame:
+        xalign 0.5  # Adjust the x-position of the rectangle
+        yalign 0.5   # Adjust the y-position of the rectangle
+        xysize (300, 200)
+        background "#FFFFFF"  # Set the background color of the rectangle (white)
+        text "WEEK 1":
+            xalign 0.5 
+            yalign 0.3
+            color "#000000"  
+        textbutton "Start Week":
+            xalign 0.5
+            yalign 0.7
+            action Return()
+                
 screen week_2_screen():
-    text "WEEK 2" xalign 0.5 yalign 0.5
-    textbutton "Start Week":        
-        xalign 0.5
-        yalign 0.6
-        action Return()
+    frame:
+        xalign 0.5  # Adjust the x-position of the rectangle
+        yalign 0.5   # Adjust the y-position of the rectangle
+        xysize (300, 200)
+        background "#FFFFFF"  # Set the background color of the rectangle (white)
+        text "WEEK 2":
+            xalign 0.5 
+            yalign 0.3
+            color "#000000"  
+        textbutton "Start Week":
+            xalign 0.5
+            yalign 0.7
+            action Return()
 
 screen week_3_screen():
-    text "WEEK 3" xalign 0.5 yalign 0.5
-    textbutton "Start Week":        
-        xalign 0.5
-        yalign 0.6
-        action Return()    
+    frame:
+        xalign 0.5  # Adjust the x-position of the rectangle
+        yalign 0.5   # Adjust the y-position of the rectangle
+        xysize (300, 200)
+        background "#FFFFFF"  # Set the background color of the rectangle (white)
+        text "WEEK 3":
+            xalign 0.5 
+            yalign 0.3
+            color "#000000"  
+        textbutton "Start Week":
+            xalign 0.5
+            yalign 0.7
+            action Return()   
+
+screen week_4_screen():
+    frame:
+        xalign 0.5  # Adjust the x-position of the rectangle
+        yalign 0.5   # Adjust the y-position of the rectangle
+        xysize (300, 200)
+        background "#FFFFFF"  # Set the background color of the rectangle (white)
+        text "WEEK 4":
+            xalign 0.5 
+            yalign 0.3
+            color "#000000"  
+        textbutton "Start Week":
+            xalign 0.5
+            yalign 0.7
+            action Return()   
+
+screen week__screen():
+    frame:
+        xalign 0.5  # Adjust the x-position of the rectangle
+        yalign 0.5   # Adjust the y-position of the rectangle
+        xysize (300, 200)
+        background "#FFFFFF"  # Set the background color of the rectangle (white)
+        text "WEEK 5":
+            xalign 0.5 
+            yalign 0.3
+            color "#000000"  
+        textbutton "Start Week":
+            xalign 0.5
+            yalign 0.7
+            action Return()   
+
+screen week_6_screen():
+    frame:
+        xalign 0.5  # Adjust the x-position of the rectangle
+        yalign 0.5   # Adjust the y-position of the rectangle
+        xysize (300, 200)
+        background "#FFFFFF"  # Set the background color of the rectangle (white)
+        text "WEEK 6":
+            xalign 0.5 
+            yalign 0.3
+            color "#000000"  
+        textbutton "Start Week":
+            xalign 0.5
+            yalign 0.7
+            action Return()   
+
+
+screen week_7_screen():
+    frame:
+        xalign 0.5  # Adjust the x-position of the rectangle
+        yalign 0.5   # Adjust the y-position of the rectangle
+        xysize (300, 200)
+        background "#FFFFFF"  # Set the background color of the rectangle (white)
+        text "WEEK 7":
+            xalign 0.5 
+            yalign 0.3
+            color "#000000"  
+        textbutton "Start Week":
+            xalign 0.5
+            yalign 0.7
+            action Return()
+
+screen week_8_screen():
+    frame:
+        xalign 0.5  # Adjust the x-position of the rectangle
+        yalign 0.5   # Adjust the y-position of the rectangle
+        xysize (300, 200)
+        background "#FFFFFF"  # Set the background color of the rectangle (white)
+        text "WEEK 8":
+            xalign 0.5 
+            yalign 0.3
+            color "#000000"  
+        textbutton "Start Week":
+            xalign 0.5
+            yalign 0.7
+            action Return()   
+
+
+
 
 screen say(who, what):
     style_prefix "say"

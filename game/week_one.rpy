@@ -4,8 +4,24 @@
 #---VARIABLES---
 define Peter = Character("Peter", color="68a24b")
 define Bill = Character("Andy", color="#4397fa")
+define Andy = Character("Andy", color="#4397fa")
+define Alex = Character("Alex", color="#d45e27")
 define Mom = Character("Mom", color="#e011be" )
 define Dad = Character("Dad", color="#331b9e")
+
+define Instructor = Character("Instructor", color= "#830950")
+define Student1 = Character("Student", color="#af8c18")
+define Student2 = Character("Student", color="#af8c18")
+define Officer = Character("Cop", color="#5a17b1")
+define Homeless = Character("Homeless", color="#1ba026")
+define Nurse = Character("Nurse", color="#db179a")
+define MaleStore = Character("Store Staff", color="#9b6513")
+define FemaleStore = Character("Store Staff", color="#af8c18")
+define Racist = Character("Racist Person", color="#e01f1f")
+define FrontDesk = Character("Front Desk Receptionist", color="#3aa743")
+define RandomPerson = Character("Random Person", color="#af8c18")
+
+#----Stats------
 default pressure = 0
 default max_pressure = 20
 default max_action_points = 50
@@ -13,13 +29,19 @@ default current_action_points = 50
 default study = 0
 default language_skill = 50
 $ unknown_word_color = "#e71c1c" #red
+default finished_police_cert = False
+default police_cert_part_1 = False
+default police_cert_part_2 = False
 
+default current_week = 1
 
 label start:
-    jump week_1_screen_display
+    jump week_2_debug
+    #For debugging
+    # jump week_1_screen_display
 
 label week_1_screen_display:
-    scene background school
+    scene background week
     call screen week_1_screen
     jump week_1_start
 
@@ -33,9 +55,11 @@ label week_1_start:
     Peter "Hello, excuse me, how do I get to this location?"
  
     hide peter normal
+    show student1 normal
     Character("Stranger") "Oh! Go straight ahead, take a left, pass by @!#, then make a right, 
     and you'll see #!, There will be a sign for Bu***g 7 right above the entrance, you can't miss it!"
 
+    hide student1 normal
     show peter normal
     Peter "Uhhh..."
 
@@ -160,15 +184,16 @@ menu:
 label week_1_continue_continue:
     scene background store
 
+    show male owner at right
     Character("Super Market Staff") "The….ohh, you mean P******ed Eggs, right?"
 
     show peter normal at left
     Peter "The ... .what? Uhh…Yes? Maybe?"
 
-    hide peter normal
+    show male owner at right
     Character("Super Market Staff") "It’s ok, let me show you. This way!"
 
-    show mom normal at right
+    show mom normal
     Mom "Great! Still relying on you! Your Language Skill is really good! What's that word called?"
 
     show peter normal
