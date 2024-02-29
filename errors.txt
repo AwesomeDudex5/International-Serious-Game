@@ -2,9 +2,47 @@
 errors listed below, and try again.
 
 
-File "game/Menupopupfunction.rpy", line 37: Line is indented, but the preceding hover statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
-    xzoom 2.0
-    ^
+The label filmweekent is defined twice, at File "game/week_one.rpy", line 247:
+label filmweekent:
+and File "game/week_one.rpy", line 253:
+label filmweekent:
+
+
+The label filmweekent is defined twice, at File "game/week_one.rpy", line 253:
+label filmweekent:
+and File "game/week_one.rpy", line 255:
+label filmweekent:
+
+
+The label filmweekent is defined twice, at File "game/week_one.rpy", line 255:
+label filmweekent:
+and File "game/week_one.rpy", line 258:
+label filmweekent:
+
+
+The label filmweekent is defined twice, at File "game/week_one.rpy", line 258:
+label filmweekent:
+and File "game/week_one.rpy", line 261:
+label filmweekent:
+
+
+The label filmweekent is defined twice, at File "game/week_one.rpy", line 261:
+label filmweekent:
+and File "game/week_one.rpy", line 263:
+label filmweekent:
+
+
+The label filmweekent is defined twice, at File "game/week_one.rpy", line 263:
+label filmweekent:
+and File "game/week_one.rpy", line 266:
+label filmweekent:
+
+
+The label filmweekent is defined twice, at File "game/week_one.rpy", line 266:
+label filmweekent:
+and File "game/week_one.rpy", line 267:
+label filmweekent:
+
 
 Ren'Py Version: Ren'Py 8.2.0.24012702
-Sun Feb 25 13:46:30 2024
+Wed Feb 28 20:37:32 2024

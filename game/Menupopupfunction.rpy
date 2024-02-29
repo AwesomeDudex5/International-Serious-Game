@@ -1,3 +1,6 @@
+
+
+
 screen mapPopoUp():
     imagebutton:
         xalign 0
@@ -25,7 +28,7 @@ screen showmap():
         yoffset 5
         idle "film"
         hover "film_hover"
-        action NullAction()
+        action Jump ("filmweekent")
     
     imagebutton:
         xalign 0.25
@@ -34,7 +37,7 @@ screen showmap():
         yoffset 5
         idle "House.png"
         hover "House Hover.png"
-        action NullAction()
+        action Jump ("houseweekent")
 
     
     imagebutton:
@@ -44,8 +47,7 @@ screen showmap():
         yoffset 5
         idle "police station"
         hover "policestation_Hover.png"
-        action NullAction()
-    
+        action Jump ("policeweekent")
     
     
     imagebutton:
@@ -55,7 +57,7 @@ screen showmap():
         yoffset 5
         idle "hospital"
         hover "hospital_hover"
-        action NullAction()
+        action Jump ("hosptweekent")
 
     
 
@@ -68,7 +70,7 @@ screen showmap():
         yoffset 5
         idle "Restaurant.png"
         hover "Restaurant Hover.png"
-        action NullAction()
+        action Jump ("restweekent")
 
     
     imagebutton:
@@ -78,7 +80,7 @@ screen showmap():
         yoffset 5
         idle "school"
         hover "school_Hover.png"
-        action NullAction()
+        action Jump ("schoolweekent")
 
 
     
@@ -89,7 +91,7 @@ screen showmap():
         yoffset 5
         idle "store"
         hover "store_Hover.png"
-        action NullAction()
+        action Jump ("storeweekent")
 
     
     imagebutton:
@@ -99,4 +101,6 @@ screen showmap():
         yoffset 5
         idle "Dorm.png"
         hover "Dorm Hover.png"
-        action NullAction()
+        action Jump ("dormweekent")
+
+
