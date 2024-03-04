@@ -246,16 +246,29 @@ menu:
         $ study += 2
         $ language_skill += 1
         $ pressure += 1
-        jump week_2_start
+        jump week_1_end
     "Talk with your major advisor":
         "Action Point -, Study +, Language Skill + \n
         (Gain more insight about your major)"
         $ current_action_points -= 1
         $ study += 1
         $language_skill += 1
-        jump week_2_start
+        jump week_1_end
     "Ignore it.":
-        jump week_2_start
+        jump week_1_end
+
+
+label week_1_end:
+    scene background week
+    "(End of the first week)"
+
+    #Game Over check
+    #Mak and Li, add this code to places where it needs to go
+    if pressure >= max_pressure:
+        jump game_over_screen
+
+    jump week_2_start
+
 
 
 
