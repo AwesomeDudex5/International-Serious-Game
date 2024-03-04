@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/screens.rpy", line 172: end of line expected.
-    frame:5
-          ^
+File "game/week_6.rpy", line 129: expected statement.
+    "Went with Alex and others on a weekend field trip":
+                                                       ^
 
 Ren'Py Version: Ren'Py 8.2.0.24012702
-Thu Feb 29 05:49:21 2024
+Sun Mar  3 16:34:37 2024

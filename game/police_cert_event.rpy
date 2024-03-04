@@ -89,11 +89,13 @@ label police_cert_event_part_2_option_1:
             Dad "As I said, you need to ask more, confirm when in doubt! You can't always blame others!" 
             "(You had an argument with your father.)"
             "Stress ++ \n (Lecture from parent)"
+            $ pressure += 2
             jump police_cert_event_part_2_option_1_end
 
         "Peter: Ah, sorry, Dad. It's my fault. I apologize; I don't have much social experience, and I didn't think things through. I won't make the same mistake next time.":
             Dad "It's okay, child. Everyone has a first time. I understand you, and you're much better than I was at your age. Take it slow. Just be more careful next time." 
             "Stress - \n (Affirmation from parent)"
+            $ pressure -= 1
             jump police_cert_event_part_2_option_1_end
 
 label police_cert_event_part_2_option_1_end:

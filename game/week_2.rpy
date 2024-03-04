@@ -28,7 +28,7 @@ label week_2_continue:
 
     scene background school
     show teacher normal
-    Instructor "Welcome to Ga$# !@si;0, My name is Fr1@#’,Today we are going to do a quick overview of this course, but before that,  let’s get to know the people around you!"
+    Instructor "Welcome to Ga$# !@si;0, My name is Fr1@#’,Today we are going to do a quick overview of this course, but before that, let’s get to know the people around you!"
 
     hide teacher normal
     show alex normal at right
@@ -60,6 +60,8 @@ label week_2_menu_1_choice_1:
     hide alex normal
     
     "Stress +, Language+, \n (Stress from awkwardly asking to write their name) \n (Learned more about the person and associated text)"
+    $ pressure += 1
+    $ language_skill += 1
     jump week_2_continue_1
 
 
@@ -89,12 +91,18 @@ menu:
         jump week_2_restaurant_option
     "Talk with Instructor":
         "Stress +, Language skill +, Study + \n (Anxiety from approaching the teacher, but got comfortable talking with him and gained knowledge)"
+        $ pressure += 1
+        $ language_skill += 1
+        $ study += 1
         jump week_2_continue_2
     "Gaming at home":
         "Stress - - \n (While not productive, it is a great stress relievers)"
+        $ pressure -= 2
         jump week_2_continue_2
     "Hang out":
         "Stress - - -, Money - \n (Great way to destress but it also cost money)"
+        $ pressure -= 3
+        $ money -= 1
         jump week_2_continue_2
 
 
@@ -141,18 +149,20 @@ label week_2_restaurant_option_continue:
     "(The waiter returns with the menu and hands it to Peter.)"
 
     show random person at right
-    Character("Ms. Chen") "Hello dear. I'm the owner of this restaurant. You can call me Ms. Chen. This is the menu in *mother language*. By the way… are you from *Home Town*?"
+    Character("Ms. Chen") "Hello dear. I'm the owner of this restaurant. You can call me Ms. Chen." 
+    Character("Ms. Chen") "This is the menu in *mother language*. By the way… are you from *Home Town*?"
    
     show peter normal at left
     Peter "Yes, ma'am. How did you know?"
     
-    Character("Ms. Chen") "Oh, I could definitely tell! Our hometown is also from there! It's been ages since I
-    met a fellow villager! Come, come, what would you like to eat? Our dishes are truly authentic! 
-    By the way, dear, are you a student here? How long have you been here?..."
+    Character("Ms. Chen") "Oh, I could definitely tell! Our hometown is also from there!" 
+    Character("Ms. Chen") "It's been ages since I met a fellow villager! Come, come, what would you like to eat? Our dishes are truly authentic!" 
+    Character("Ms. Chen") "By the way, dear, are you a student here? How long have you been here?..."
 
     "(Peter enjoys his meal while conversing with the restaurant owner)"
 
     "Stress - \n (Good food relaxes the mind)"
+    $ pressure -= 1
 
     jump week_2_continue_2
 

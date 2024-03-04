@@ -50,16 +50,24 @@ label week_3_dialogue_continue:
     Peter "Ehh, I was having a hard time on my assignments…So I didn’t pay attention to the Email."
     
     "Stress + \n(Feeling like they missed out on something important)"
+    $ pressure += 1
     
+    hide andy normal
     show alex normal at right
    
-    Alex "Checking emails and staying updated with school information is crucial; it can help you not miss out on important updates. If you're facing difficulties with your studies, perhaps I can assist you too? I spend my weekends studying at the library, so if you're interested, you can join me."
+    Alex "Checking emails and staying updated with school information is crucial; it can help you not miss out on important updates."
+    Alex "If you're facing difficulties with your studies, perhaps I can assist you too?"
+    Alex "I spend my weekends studying at the library, so if you're interested, you can join me."
    
-    Peter "That sounds great! I'll check my weekend schedule when I get back, and if I have the time, I'd be more than willing to study together with you! What about you, Andy? What’s your plan for this week?"
+    Peter "That sounds great! I'll check my weekend schedule when I get back." 
+    Peter "If I have the time, I'd be more than willing to study together with you!" 
+    Peter "What about you, Andy? What’s your plan for this week?"
    
     hide alex normal
     show bill normal at right
-    Andy "Me? I'm planning to unwind a bit this week. I'm thinking of going to the Cinema. However, I'm waiting to go with someone else; it's not as enjoyable alone. Are you interested? If you're free, you can join as well."
+    Andy "Me? I'm planning to unwind a bit this week. I'm thinking of going to the Cinema." 
+    Andy "However, I'm waiting to go with someone else; it's not as enjoyable alone." 
+    Andy "Are you interested? If you're free, you can join as well."
    
     Peter "That also sounds like a good plan…I didn't even know there was a Cinema near our school. And it's also a good way to release the pressure."
     jump week_3_parent_call
@@ -81,7 +89,8 @@ menu:
         Dad "Is that so? Well… you better try your best... Almost all of our family's savings are going into your education, it will be tough for us if you can’t graduate."
         jump week_3_parent_call_option_continue
     "Ehh… Not too bad. It’s a little bit hard but I’m trying my best to follow up.":
-        Dad "Is that so? Well… you better try your best... Almost all of our family's savings are going into your education, it will be tough for us if you can’t graduate."
+        Dad "Is that so? Well… you better try your best..." 
+        Dad"Almost all of our family's savings are going into your education, it will be tough for us if you can’t graduate."
         jump week_3_parent_call_option_2
 
 label week_3_parent_call_option_2:
@@ -89,15 +98,18 @@ label week_3_parent_call_option_2:
         "Alright, alright, I get it. No need to repeat it over and over. I'm already under a lot of pressure!":
             Dad "What's with this attitude? Do you know how much our family has sacrificed for your education? You need to show gratitude and appreciate that!"
             "Stress + \n (Lectured by parent)"
+            $ pressure += 1
             jump week_3_parent_call_option_continue
         "Yes, Dad, I understand. Don't worry, I won't let you down.":
             Dad "Alright, if you encounter any difficulties, remember to talk to us. We will do our best to help you!"
             "Stress - \n (Encouragement from parent)"
+            $ pressure -= 1
             jump week_3_parent_call_option_continue
 
 label week_3_parent_call_option_continue:
     
-    Dad "Actually, the reason I called you this time is to assign you a task. We are currently in the process of applying for your permanent residency card, and I need you to go get a Proof for no criminal record."
+    Dad "Actually, the reason I called you this time is to assign you a task." 
+    Dad "We are currently in the process of applying for your permanent residency card, and I need you to go get a Proof for no criminal record."
     
     show peter normal
     Peter "A what? And where should I go to get this?"
@@ -113,9 +125,12 @@ label week_3_weekend:
     menu:
         "Cinema with Andy":
             "Stress - - \n (Spending time with friends alleviates stress)"
+            $ pressure -= 2
             jump week_3_end
         "Library with Alex":
             "Study +, Language + \n (Studying at library improves your language skills)"
+            $ pressure += 1
+            $ language += 1
             jump week_3_end
         "Police certificates event" if not finished_police_cert:
             jump police_cert_event_start
