@@ -136,14 +136,6 @@ label week_3_weekend:
             jump police_cert_event_start
 
 label week_3_end:
-
-    "(End of the week)"
-
-    #Game Over check
-    #Mak and Li, add this code to places where it needs to go
-    if pressure >= max_pressure:
-        jump game_over_screen
-
     jump week_4_start
            
 

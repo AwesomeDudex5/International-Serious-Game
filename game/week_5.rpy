@@ -143,11 +143,5 @@ menu:
 
 label week_5_end:
     "(Weekend is over)"
-
-    #Game Over check
-    #Mak and Li, add this code to places where it needs to go
-    if pressure >= max_pressure:
-        jump game_over_screen
-
     jump week_6_start
 
