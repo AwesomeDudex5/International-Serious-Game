@@ -1,30 +1,28 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/week_one.rpy", line 11, in script
-    define Seraphina = Character("Seraphina ", "#af8c18")
-  File "game/week_one.rpy", line 11, in <module>
-    define Seraphina = Character("Seraphina ", "#af8c18")
-TypeError: 'kind' is an invalid keyword argument for str()
+  File "game/week_one.rpy", line 12, in script
+    define dayoff = character(color="#331b9e")
+  File "game/week_one.rpy", line 12, in <module>
+    define dayoff = character(color="#331b9e")
+NameError: name 'character' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/week_one.rpy", line 11, in script
-    define Seraphina = Character("Seraphina ", "#af8c18")
-  File "C:\Users\lowda\Downloads\renpy-8.2.0-sdk.7z\renpy-8.2.0-sdk\renpy\ast.py", line 2219, in execute
+  File "game/week_one.rpy", line 12, in script
+    define dayoff = character(color="#331b9e")
+  File "E:\renpy-8.2.0-sdk\renpy\ast.py", line 2219, in execute
     self.set()
-  File "C:\Users\lowda\Downloads\renpy-8.2.0-sdk.7z\renpy-8.2.0-sdk\renpy\ast.py", line 2233, in set
+  File "E:\renpy-8.2.0-sdk\renpy\ast.py", line 2233, in set
     value = renpy.python.py_eval_bytecode(self.code.bytecode)
-  File "C:\Users\lowda\Downloads\renpy-8.2.0-sdk.7z\renpy-8.2.0-sdk\renpy\python.py", line 1202, in py_eval_bytecode
+  File "E:\renpy-8.2.0-sdk\renpy\python.py", line 1202, in py_eval_bytecode
     return eval(bytecode, globals, locals)
-  File "game/week_one.rpy", line 11, in <module>
-    define Seraphina = Character("Seraphina ", "#af8c18")
-  File "C:\Users\lowda\Downloads\renpy-8.2.0-sdk.7z\renpy-8.2.0-sdk\renpy\character.py", line 1718, in Character
-    return type(kind)(name, kind=kind, **properties)
-TypeError: 'kind' is an invalid keyword argument for str()
+  File "game/week_one.rpy", line 12, in <module>
+    define dayoff = character(color="#331b9e")
+NameError: name 'character' is not defined
 
-Windows-10-10.0.19045 AMD64
+Windows-10-10.0.22621 AMD64
 Ren'Py 8.2.0.24012702
 International Serious Game 1.0
-Sun Mar  3 19:43:38 2024
+Mon Mar  4 21:39:43 2024

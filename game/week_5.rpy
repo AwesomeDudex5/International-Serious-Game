@@ -143,5 +143,5 @@ menu:
 
 label week_5_end:
     "(Weekend is over)"
-    jump week_6_start
+    jump menuintroduction
 

@@ -9,7 +9,6 @@ define Alex = Character("Alex", color="#d45e27")
 define Mom = Character("Mom", color="#e011be" )
 define Dad = Character("Dad", color="#331b9e")
 define Seraphina = Character("Seraphina", color="#331b9e")
-
 define Instructor = Character("Instructor", color= "#830950")
 define Student1 = Character("Student", color="#af8c18")
 define Student2 = Character("Student", color="#af8c18")
@@ -246,17 +245,21 @@ menu:
         $ study += 2
         $ language_skill += 1
         $ pressure += 1
-        jump week_2_start
+        jump menuintroduction
     "Talk with your major advisor":
         "Action Point -, Study +, Language Skill + \n
         (Gain more insight about your major)"
         $ current_action_points -= 1
         $ study += 1
         $language_skill += 1
-        jump week_2_start
+        jump menuintroduction
     "Ignore it.":
-        jump week_2_start
+        jump menuintroduction
 
-
+label menuintroduction:
+    scene background room
+    show dad normal at right
+    Dad "Do you want to go out and realaxing"
+    call screen mapPopoUp
 
 

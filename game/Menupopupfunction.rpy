@@ -13,15 +13,6 @@ screen showmap():
     add"images/BG art.png"xpos 0 ypos 0 xsize config.screen_width ysize config.screen_height
 
     imagebutton:
-        xalign 0.1
-        yalign 1
-        xoffset -5
-        yoffset 5
-        idle "images/returnIcon.jpg"
-        action Return()
-    
-
-    imagebutton:
         xalign 0.75
         yalign 0.1
         xoffset -5

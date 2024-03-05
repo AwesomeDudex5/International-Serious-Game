@@ -1,43 +1,67 @@
+default weekstransfer = 0
+
 label filmweekent:
     scene background room
-    dayoff "You have a great weekend in theater"
-    jump week_2_start
+    Dad "we have a great weekend in theater"
+    jump weekcount
 
 
 label dormweekent:
     scene background room
-    dayoff "You have a great weekend in another dorm"
-    jump week_2_start
+    Dad "we have a great weekend in another dorm"
+    jump weekcount
 
 label policeweekent:
     scene background room
-    dayoff "Why You go to plice station?"
-    jump week_2_start
+    Dad "Why You go to plice station?"
+    jump weekcount
 
 
 
 label restweekent:
     scene background room
-    dayoff "you and your family have a great meal on family resturant!"
-    jump week_2_start
+    Dad "we have a great meal on family resturant!"
+    jump weekcount
 
 
 label houseweekent:
     scene background room
-    dayoff "you have a great time with your family"
-    jump week_2_start
+    Dad "we have a great time with your family"
+    jump weekcount
 
 label hosptweekent:
     scene background room
-    dayoff "You go to hospital and check out you are good!"
-    jump week_2_start
+    Dad "we go to hospital and check out you are perfect!"
+    jump weekcount
 
 
 label schoolweekent:
     scene background room
-    dayoff "School is close. but you still wnat to study...."
-    jump week_2_start
+    Dad "School is close. but you still wnat to study...."
+    jump weekcount
 label storeweekent:
     scene background room
-    dayoff "You are shopping this weekend"
-    jump week_2_start
+    Dad "Dad are shopping this weekend"
+    jump weekcount
+
+
+label weekcount:
+    if weekstransfer ==0:
+        $ weekstransfer+=1
+        jump week_2_start
+    if weekstransfer ==1:
+        $ weekstransfer+=1
+        jump week_3_start
+    if weekstransfer ==2:
+        $ weekstransfer+=1
+        jump week_4_start
+    if weekstransfer ==3:
+        $ weekstransfer+=1
+        jump week_5_start
+    if weekstransfer ==4:
+        $ weekstransfer+=1
+        jump week_6_start
+    if weekstransfer ==5:
+        $ weekstransfer+=1
+        jump week_7_start 
+

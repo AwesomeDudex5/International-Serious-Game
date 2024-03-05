@@ -249,13 +249,13 @@ menu:
 
 label week_2_homework_4_correct:
     "That's correct"
-    jump week_2_end
+    jump menuintroduction
 
 label week_2_homework_4_incorrect:
     "Thats wrong"
-    jump week_2_homework_4
+    jump menuintroduction
 
 
 label week_2_end:
     "(Homework is finished)"
-    jump week_3_start
+    jump menuintroduction
