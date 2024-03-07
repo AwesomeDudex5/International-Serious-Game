@@ -383,8 +383,17 @@ label course_selection_5:
             jump course_selection_end
 
 label course_selection_end:
-    "Course selection is finished."
-    jump menuintroduction
+    if selected_courses_count == 0:
+        "You didn't select any course this semester. "
+        "Couple of weeks later..."
+        "Since you haven't enrolled in any courses this semester, your visa has become invalid. "
+        "One day, your parents discovered this matter.They are extremely angry."
+        "Bad End"
+        jump week_7_end
+
+    else:
+        "Course selection is finished."
+        jump menuintroduction
 
 
 label menuintroduction:

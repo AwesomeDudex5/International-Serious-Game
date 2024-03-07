@@ -1,28 +1,24 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/week_one.rpy", line 12, in script
-    define dayoff = character(color="#331b9e")
-  File "game/week_one.rpy", line 12, in <module>
-    define dayoff = character(color="#331b9e")
-NameError: name 'character' is not defined
+  File "game/week_2.rpy", line 86, in script
+    Instructor "There are a total of #@￥% assegnments in this semester, with each one due on &&*%**. And thes week we will mainly focus on the de#$$$%%g#!@."
+TypeError: not enough arguments for format string
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/week_one.rpy", line 12, in script
-    define dayoff = character(color="#331b9e")
-  File "E:\renpy-8.2.0-sdk\renpy\ast.py", line 2219, in execute
-    self.set()
-  File "E:\renpy-8.2.0-sdk\renpy\ast.py", line 2233, in set
-    value = renpy.python.py_eval_bytecode(self.code.bytecode)
-  File "E:\renpy-8.2.0-sdk\renpy\python.py", line 1202, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/week_one.rpy", line 12, in <module>
-    define dayoff = character(color="#331b9e")
-NameError: name 'character' is not defined
+  File "game/week_2.rpy", line 86, in script
+    Instructor "There are a total of #@￥% assegnments in this semester, with each one due on &&*%**. And thes week we will mainly focus on the de#$$$%%g#!@."
+  File "C:\Users\tlx11\Downloads\renpy-8.2.0-sdk\renpy\ast.py", line 2557, in execute
+    Say.execute(self)
+  File "C:\Users\tlx11\Downloads\renpy-8.2.0-sdk\renpy\ast.py", line 615, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "C:\Users\tlx11\Downloads\renpy-8.2.0-sdk\renpy\exports.py", line 1482, in say
+    what = what % tag_quoting_dict
+TypeError: not enough arguments for format string
 
 Windows-10-10.0.22621 AMD64
 Ren'Py 8.2.0.24012702
 International Serious Game 1.0
-Mon Mar  4 21:39:43 2024
+Thu Mar  7 11:48:14 2024

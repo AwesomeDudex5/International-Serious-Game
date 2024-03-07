@@ -1,4 +1,5 @@
 
+default alex_information = 0
 
 label week_2_debug:
     jump week_2_start
@@ -28,11 +29,17 @@ label week_2_continue:
 
     scene background school
     show teacher normal
-    Instructor "Welcome to Ga$# !@si;0, My name is Fr1@#’,Today we are going to do a quick overview of this course, but before that, let’s get to know the people around you!"
-
+    if language_skill < 3:
+        Instructor "Welcome to Huk█# !@si;0, My name is █r1@#,To█ay we are going to do a queck overview of this course, but before that, let’s get to know the pea-pull a-rownd yew!"
+    else:
+        Instructor "Welcome to Go█ho! Sh^ h@me, My name is Fr1@#,Today we are going to do a quick overview of this course, but before that, let’s get to know the people around you!"
     hide teacher normal
+
     show alex normal at right
-    Character("???") "Hello! My name is A**x, and my major is Hu*** C****** #$@."
+    if language_skill < 3:
+        Character("???") "Hello! Mi neme es H-?l**, ad mi mejor is He*e in* #$@. "
+    else:
+        Character("???") "Hello! My name is Ha?**x, and my major is G@me Ii-Gu█st. (Game Linguist)"
 
     show peter normal at left
     Peter "Oh um..."
@@ -51,10 +58,11 @@ menu:
 label week_2_menu_1_choice_1:
 
     show alex normal at right
-    Alex "Hmm? Sure..?My name is Al*x?, I major in Hu**n Com**** In……"
+    Character("Ha?**x?") "Hmm? Sure..?My name is il*x?, I major in G@me IinGu█st "
 
     show peter normal at left
     Peter "Uhh…can you…write it down?"
+    $ alex_information = 1
 
     hide peter normal
     hide alex normal
@@ -67,15 +75,18 @@ label week_2_menu_1_choice_1:
 
 label week_2_menu_1_choice_2:
     show peter normal at left
-    Peter "Uhh….Hello! I’m Peter! My major is xxx."
+    Peter "Uhh….Hello! I'm Peter! My major is N0t Sereous? Game!"
     jump week_2_continue_1
     
 
 label week_2_continue_1:
     show teacher normal
-    Instructor "Alright, it seems like everyone has become acquainted. Let's begin by getting to know more about the course. There are a total of #@$$ 
-    assignments in this semester, with each one due on &&****. And this week we will mainly focus on the de#$$$%%g#!@."
-
+    if language_skill < 3:
+        Instructor "Alright, it sems bike everlione hes become acquainted. Lets bigin by getting to know more about the course. "
+        Instructor "Thre ar e total of ?x assegnments in tis semester, wth ech one tue on ph█ei. And thes week we will mainly focus on ██."
+    else:
+        Instructor "Alright, it seems like everyone has bicome acquainted. Let's begin by getting to know more about the course.  "
+        Instructor "There are a total of thkx assignments in this semester, with each one due on Fre██ t. And this week we will mainly focus on the Hem ██te TeSin."
     hide teacher normal
     "Classes went on for the week. Peter always made it to lectures each day."
     jump week_2_weekend
@@ -188,11 +199,13 @@ menu:
 
 label week_2_homework_1_correct:
     "That's correct"
+    "study +"
+    $ study += 1
     jump week_2_homework_2
 
 label week_2_homework_1_incorrect:
     "Thats wrong"
-    jump week_2_homework_1
+    jump week_2_homework_2
 
 # Question 2
 label week_2_homework_2:
@@ -208,11 +221,13 @@ menu:
 
 label week_2_homework_2_correct:
     "That's correct"
+    "study +"
+    $ study += 1
     jump week_2_homework_3
 
 label week_2_homework_2_incorrect:
     "Thats wrong"
-    jump week_2_homework_2
+    jump week_2_homework_3
 
 # Question 3
 label week_2_homework_3:
@@ -228,11 +243,13 @@ menu:
 
 label week_2_homework_3_correct:
     "That's correct"
+    "study +"
+    $ study += 1
     jump week_2_homework_4
 
 label week_2_homework_3_incorrect:
     "Thats wrong"
-    jump week_2_homework_3
+    jump week_2_homework_4
 
 
 # Question 4
@@ -240,15 +257,17 @@ label week_2_homework_4:
     "What’s the due date?"
 
 menu:
-    "Feb 1st ":
-        jump week_2_homework_4_incorrect
+    "Feb 31st ":
+        jump week_2_homework_4_correct
     "Festival ":
         jump week_2_homework_4_incorrect
     "Fridays":
-        jump week_2_homework_4_correct
+        jump week_2_homework_4_incorrect
 
 label week_2_homework_4_correct:
     "That's correct"
+    "study +"
+    $ study += 1
     jump menuintroduction
 
 label week_2_homework_4_incorrect:
