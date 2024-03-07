@@ -40,6 +40,8 @@ default police_cert_part_2 = False
 
 default current_week = 1
 default hint = 0
+
+
 label start:
     #For debugging, uncomment the line below with the week you want to debug
     #jump week_7_debug
@@ -269,7 +271,6 @@ menu:
         "Action Point -, Language Skill + \n
         (Your language has become more fluent.)"
         $ current_action_points -= 1
-        $ pressure -= 1
         $ language_skill += 1
         jump check_Action_Point
     "Go to supermarket":
@@ -277,12 +278,17 @@ menu:
         (Shopping brings you joy.)"
         $ current_action_points -= 2
         $ language_skill += 1
+        $ pressure -= 1
+        if pressure < 0:
+            $ pressure = 0
         jump check_Action_Point
     "Gaming at home.":
         "Action Point --, Stress --- \n
         (You cast your worries aside.)"
         $ current_action_points -= 2
         $ pressure -= 3
+        if pressure < 0:
+            $ pressure = 0
         jump check_Action_Point
 # ----------- Course Select Puzzle -----------------
 default selected_courses_count = 0

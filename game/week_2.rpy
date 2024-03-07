@@ -18,11 +18,12 @@ label week_2_screen_display:
 label week_2_dialogue:
     scene background room
     "(School has officially started)"
+    show screen pressure_display
 
 menu:
     "Wake Up":
         jump week_2_continue
-    "Slacking off at home" if pressure >= 4:
+    "Slacking off at home" if pressure >= 6:
         "You've skipped all the classes, how delightful!"
         "Stress ---"
         jump menuintroduction

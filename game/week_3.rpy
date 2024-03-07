@@ -15,28 +15,49 @@ label week_3_screen_display:
 label week_3_wakeup:
     scene background room
     "A new week has begun."
+    show screen pressure_display
 
 menu:
     "Wake Up":
         jump week_3_dialogue
-    "Slacking off at home" if pressure >= 6:
+    "Slacking off at home" if pressure >= 5:
         "You've skipped all the classes, how delightful!"
         "Stress ---"
         jump menuintroduction
 
+label alex_name:
+
+menu:
+    "H...Ha^x!, I’m doing well...what about you?":
+        jump forgot_name_1
+    "Sorry, what’s your name again?":
+        jump forgot_name_0
+
+label forgot_name_1:
+    "I'm doing well, and by the way...my name is 'Alex'...you forgot that?"
+    "The atmosphere became awkward, so you and Andy didn't say much"
+    jump week_3_dialogue_continue
+label forgot_name_0:
+    "You don't remember me? Ahh...my name is Alex."
+    "The atmosphere became awkward, so you and Andy didn't say much"
+    jump week_3_dialogue_continue
+
 #Start of the dialogue
 label week_3_dialogue:
     scene background school
-    
     show alex normal at right
-    Alex "Hello Peter, how was your weekend?"
-
     show peter normal at left
-    Peter "Hello Alex! I’m doing well! What about you?"
-
+    if alex_information == 0:
+        Character("Ha?**x") "Helo Peter, how was your waekend?"
+        jump alex_name
+    if alex_information == 1:
+        Alex "Hello Peter, how was your weekend?"
+        Peter "Hello Alex! I’m doing well! What about you?"
+        jump week_3_dialogue_2nd_part
     hide peter normal
     hide alex normal
 
+label week_3_dialogue_2nd_part:
 menu:
     "I guess you are taking The Foundations of UX Design course right?":
         show alex normal at right
@@ -46,6 +67,7 @@ menu:
         show alex normal at right
         Alex "What? Ehh… I wasn’t taking that class. I major in HCI, Human Computer Interaction. Don’t you remember?"
         jump week_3_dialogue_continue
+
 
 label week_3_dialogue_continue:
     scene background school

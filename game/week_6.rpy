@@ -16,6 +16,7 @@ label week_6_screen_display:
 label week_6_wakeup:
     scene background room
     "A new week has begun."
+    show screen pressure_display
 
 menu:
     "Wake Up":

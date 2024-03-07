@@ -21,6 +21,7 @@ $ bool_test = false
 #Start of the dialogue
 label week_7_dialogue:
     scene background school
+    show screen pressure_display
 
     "(It is the last few weeks before the semester ends)"
 

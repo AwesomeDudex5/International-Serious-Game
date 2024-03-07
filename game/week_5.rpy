@@ -12,15 +12,16 @@ label week_5_screen_display:
     scene background week
     call screen week_5_screen
     jump week_5_wakeup
-    
+
 label week_5_wakeup:
     scene background room
     "A new week has begun."
+    show screen pressure_display
 
 menu:
     "Wake Up":
         jump week_5_dialogue
-    "Slacking off at home" if pressure >= 6:
+    "Slacking off at home" if pressure >= 4:
         "You've skipped all the classes, how delightful!"
         "Stress ---"
         jump menuintroduction
