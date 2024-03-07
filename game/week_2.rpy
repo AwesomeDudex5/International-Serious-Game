@@ -22,9 +22,11 @@ label week_2_dialogue:
 menu:
     "Wake Up":
         jump week_2_continue
-    "Struggle Out of Bed":
-        jump week_2_continue
-      
+    "Slacking off at home" if pressure >= 4:
+        "You've skipped all the classes, how delightful!"
+        "Stress ---"
+        jump menuintroduction
+
 label week_2_continue:
 
     scene background school

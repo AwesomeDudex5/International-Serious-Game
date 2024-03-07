@@ -98,9 +98,10 @@ style frame:
 
 #show stats
 screen pressure_display():
-    text "Pressure: [pressure] / [max_pressure]" xpos 0.8 ypos 0.1 size 30  # Adjust text size as needed  
-    text "Action Points: [current_action_points] / [max_action_points]" xpos 0.8 ypos 0.2 size 30
-    text "Language Skill: [language_skill] / [max_language_skill]" xpos 0.8 ypos 0.3 size 30
+    text "Pressure: [pressure] / [max_pressure]" xpos 0.1 ypos 0.1 size 30 color "#00FFFF" bold True
+    text "Action Points: [current_action_points] / [max_action_points]" xpos 0.1 ypos 0.15 size 30 color "#00FFFF" bold True
+    text "Language Skill: [language_skill] / [max_language_skill]" xpos 0.1 ypos 0.2 size 30 color "#00FFFF" bold True
+
 
 #First Page to show Peter's backstory
 screen peter_backstory_screen():

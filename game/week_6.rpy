@@ -11,8 +11,19 @@ label week_6_start:
 label week_6_screen_display:
     scene background week
     call screen week_6_screen
-    jump week_6_dialogue
+    jump week_6_wakeup
 
+label week_6_wakeup:
+    scene background room
+    "A new week has begun."
+
+menu:
+    "Wake Up":
+        jump week_6_dialogue
+    "Slacking off at home" if pressure >= 4:
+        "You've skipped all the classes, how delightful!"
+        "Stress ---"
+        jump menuintroduction
 
 define can_go_on_trip = 1
 

@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/screens.rpy", line 104: end of line expected.
-    text "HINT": [hint] 
-                 ^
+File "game/screens.rpy", line 101: 'outline' is not a keyword argument or valid child of the text statement.
+    text "Pressure: [pressure] / [max_pressure]" xpos 0.1 ypos 0.1 size 30 color "#00FFFF" bold True outline (1, "#000000")
+                                                                                                            ^
 
 Ren'Py Version: Ren'Py 8.2.0.24012702
-Thu Mar  7 11:09:47 2024
+Thu Mar  7 12:45:53 2024
