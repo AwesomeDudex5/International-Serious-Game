@@ -2,9 +2,11 @@
 errors listed below, and try again.
 
 
-File "game/week_6.rpy", line 129: expected statement.
-    "Went with Alex and others on a weekend field trip":
-                                                       ^
+The label hosptweekent is defined twice, at File "game/labeljump.rpy", line 27:
+label hosptweekent:
+and File "game/labeljump.rpy", line 32:
+label hosptweekent:
+
 
 Ren'Py Version: Ren'Py 8.2.0.24012702
-Sun Mar  3 16:34:37 2024
+Tue Mar  5 22:53:13 2024

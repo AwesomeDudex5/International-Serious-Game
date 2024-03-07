@@ -1,37 +1,37 @@
-2024-03-05 05:45:03 UTC
+2024-03-06 07:01:14 UTC
 Windows-10-10.0.22621
 Ren'Py 8.2.0.24012702
 
 Early init took 0.06s
-Loading error handling took 0.03s
-Loading script took 0.15s
+Loading error handling took 0.02s
+Loading script took 0.14s
 Loading save slot metadata took 0.03s
 Loading persistent took 0.00s
-Running init code took 0.05s
-Loading analysis data took 0.02s
+Running init code took 0.04s
+Loading analysis data took 0.01s
 Analyze and compile ATL took 0.00s
 Reloading save slot metadata took 0.02s
 Index archives took 0.00s
 Backing up script files to 'C:\\Users\\jiach\\AppData\\Roaming/RenPy/backups\\International-Serious-Game':
-Dump and make backups took 0.07s
+Dump and make backups took 0.05s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
 Initial gc took 0.06s
 DPI scale factor: 1.250000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: Disabled thread optimizations.
-Creating interface object took 0.31s
+Creating interface object took 0.29s
 Cleaning stores took 0.00s
 Init translation took 0.03s
 Build styles took 0.00s
 Load screen analysis took 0.00s
 Analyze screens took 0.01s
 Save screen analysis took 0.02s
-Prepare screens took 0.05s
+Prepare screens took 0.06s
 Save pyanalysis. took 0.00s
 Save bytecode. took 0.02s
 Running _start took 0.00s
-Interface start took 0.14s
+Interface start took 0.12s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)
@@ -43,3 +43,53 @@ Version: b'4.6.0 NVIDIA 546.33'
 Display Info: None
 Screen sizes: virtual=(1920, 1080) physical=(1218, 685) drawable=(1218, 685)
 Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/week_3.rpy", line 133, in script
+    $ language_skills += 1
+  File "E:\renpy-8.2.0-sdk\renpy\ast.py", line 823, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "E:\renpy-8.2.0-sdk\renpy\python.py", line 1178, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/week_3.rpy", line 133, in <module>
+    $ language_skills += 1
+NameError: name 'language_skills' is not defined
+
+While running game code:
+  File "game/week_3.rpy", line 133, in script
+    $ language_skills += 1
+  File "game/week_3.rpy", line 133, in <module>
+    $ language_skills += 1
+NameError: name 'language_skills' is not defined
+
+Full traceback:
+  File "game/police_cert_event.rpy", line 63, in script
+    Peter "It‘s, uhh…Proof for no crimi￥al record? Or Certificate of No Cr%^$al Record?"
+  File "E:\renpy-8.2.0-sdk\renpy\ast.py", line 2557, in execute
+    Say.execute(self)
+  File "E:\renpy-8.2.0-sdk\renpy\ast.py", line 615, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "E:\renpy-8.2.0-sdk\renpy\exports.py", line 1482, in say
+    what = what % tag_quoting_dict
+ValueError: unsupported format character '^' (0x5e) at index 64
+
+While running game code:
+  File "game/police_cert_event.rpy", line 63, in script
+    Peter "It‘s, uhh…Proof for no crimi￥al record? Or Certificate of No Cr%^$al Record?"
+ValueError: unsupported format character '^' (0x5e) at index 64
+
+Full traceback:
+  File "game/police_cert_event.rpy", line 64, in script
+    Officer "Oh I see, I guess you mean a Cle$%^nce 2e#$er."
+  File "E:\renpy-8.2.0-sdk\renpy\ast.py", line 2557, in execute
+    Say.execute(self)
+  File "E:\renpy-8.2.0-sdk\renpy\ast.py", line 615, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "E:\renpy-8.2.0-sdk\renpy\exports.py", line 1482, in say
+    what = what % tag_quoting_dict
+ValueError: unsupported format character '^' (0x5e) at index 34
+
+While running game code:
+  File "game/police_cert_event.rpy", line 64, in script
+    Officer "Oh I see, I guess you mean a Cle$%^nce 2e#$er."
+ValueError: unsupported format character '^' (0x5e) at index 34

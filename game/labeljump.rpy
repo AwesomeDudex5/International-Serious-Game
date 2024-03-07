@@ -64,4 +64,5 @@ label weekcount:
     if weekstransfer ==5:
         $ weekstransfer+=1
         jump week_7_start 
-
+    if weekstransfer >=5:
+        jump start

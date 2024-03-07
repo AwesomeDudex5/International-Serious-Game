@@ -128,6 +128,7 @@ label week_7_home:
 label week_7_end:
     scene background week
     "The end"
+    return
 
 
 

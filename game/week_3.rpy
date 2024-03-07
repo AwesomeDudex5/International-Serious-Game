@@ -130,7 +130,7 @@ label week_3_weekend:
         "Library with Alex":
             "Study +, Language + \n (Studying at library improves your language skills)"
             $ pressure += 1
-            $ language += 1
+            $ language_skills += 1
             jump week_3_end
         "Police certificates event" if not finished_police_cert:
             jump police_cert_event_start
