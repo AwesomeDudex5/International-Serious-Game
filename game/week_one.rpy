@@ -24,12 +24,13 @@ define FrontDesk = Character("Front Desk Receptionist", color="#3aa743")
 define RandomPerson = Character("Random Person", color="#af8c18")
 
 #----Stats------
-default pressure = 0
-default max_pressure = 20
-default max_action_points = 50
-default current_action_points = 50
+default pressure = 1
+default max_pressure = 15
+default max_action_points = 3
+default current_action_points = 3
 default study = 0
-default language_skill = 50
+default max_language_skill = 15
+default language_skill = 1
 default money = 100
 
 $ unknown_word_color = "#e71c1c" #red
@@ -38,7 +39,7 @@ default police_cert_part_1 = False
 default police_cert_part_2 = False
 
 default current_week = 1
-
+default hint = 0
 label start:
     #For debugging, uncomment the line below with the week you want to debug
     #jump week_7_debug
@@ -63,8 +64,7 @@ label week_1_start:
  
     hide peter normal
     show student1 normal
-    Character("Stranger") "Oh! Go straight ahead, take a left, pass by @!#, then make a right, 
-    and you'll see #!, There will be a sign for Bu***g 7 right above the entrance, you can't miss it!"
+    Character("Stranger") "Oh! Go streight ah█ad, take a left, pass by @!#, then make a right, and you'll see #!, There will be a sign for Bu***g 7 right above the entrance, you can't miss it!"
 
     hide student1 normal
     show peter normal
@@ -91,7 +91,7 @@ label week_1_continue:
     show mom normal at left
     Mom "Hello Andy! Long time no see. You look very energetic!"
 
-    Andy "Hello Mr. X and Mr. X! Yeah, it's been ages! You haven't been here for long, have you? How's it going?"
+    Andy "Hello Mr. Dad and Mrs. Mom! Yeah, it's been ages! You haven't been here for long, have you? How's it going?"
 
     show peter normal at left
     hide mom normal
@@ -116,8 +116,7 @@ label week_1_continue:
 
     Andy "Over there is the main academic building where most of our classes are held(For Study event)." 
     Andy "The library, like you mentioned, is a great spot for studying(For study event with classmates)."
-    Andy "Oh, and the cafeteria is just a short walk from here(For social event with classmates)."
-
+    
     hide sample map
     show peter normal at left
     Peter "Thanks, Andy! It's helpful to have a guide. Anything else I should know about?"
@@ -127,9 +126,7 @@ label week_1_gym_scene:
     scene background gym
 
     show bill normal at right
-    Andy "Of course! There's the sports complex where you can hit the gym or join recreational activities." 
-    Andy "And if you ever need assistance, the student services office is in the administration building." 
-    Andy "They're really helpful with any questions you might have."
+    Andy "Of course! There's the sports complex where you can hit the gym or join recreational activities to relax yourself." 
 
     show peter normal at left
     Peter "Appreciate it, Andy! I'm sure with your guidance, I'll navigate this campus in no time."
@@ -138,12 +135,12 @@ label week_1_gym_scene:
     Andy "Personally, I think I still prefer the flavors from my hometown. If you find it hard to adjust, you can go to this restaurant here." 
     Andy "It's quite similar to our hometown taste."
 
-    Peter "Oh, got it! At least in the past couple of days, my parents are having a hard time adjusting to the local food here." 
-    Peter "My father even seems to be experiencing some stomach issues. I'll go there tomorrow. My parents need to have some hometown flavors to ease their discomfort."
+    Peter "Oh, got it! At least in the past couple of days, my parents are having a hard time adjusting to the local food here.My father even seems to be experiencing some stomach issues." 
+    Peter "So I believe my parents need to have some hometown flavors to ease their discomfort. May I know if there's a specific restaurant you recommend for that? "
 
     Andy "Exactly, Peter! It's called 'Home Flavors,' it’s actually outside the campus, at this location. You should check it out sometime."
 
-    Peter "Thanks, Andy! I appreciate the tip. I'll definitely give it a try if I need something familiar."
+    Peter "Thanks, Andy! I appreciate the tip. "
 
     Andy "Alright, I hope it was helpful for you. I've also scheduled an appointment with an advisor. I've got to go now!"
 
@@ -163,7 +160,10 @@ label week_1_store_event:
     Peter "The labels mean... uh, whole milk and semi-skimmed milk." 
     Peter "I'm not sure which one is better, we usually don't pay much attention to this back home."
 
-    Mom "Hello? Do you have...(talking with a supermarket staff)"
+    Mom "Hallo? To yu hafe...(talking with a supermarket staff)"
+    
+    Character("Super Market Staff") "?"
+
     Mom "Peter, can you ask if they have Pasteurized Eggs? I'm not sure how to say Pasteurized Eggs in this language."
 
     Peter "Ah, of course....Um... do you have...."
@@ -186,13 +186,13 @@ label week_1_continue_continue:
     scene background store
 
     show male owner at right
-    Character("Super Market Staff") "The….ohh, you mean P******ed Eggs, right?"
+    Character("Super Market Staff") "The….ohh, you mean ‘_teri-o?als’, right?"
 
     show peter normal at left
     Peter "The ... .what? Uhh…Yes? Maybe?"
 
     show male owner at right
-    Character("Super Market Staff") "It’s ok, let me show you. This way!"
+    Character("Super Market Staff") "It’s ok, l█t me sh0w you. Tis way!"
 
     hide male owner
     show mom normal at right
@@ -206,10 +206,10 @@ label week_1_continue_continue:
     hide male owner
     
 menu:
-    "'Pesterized?' Eggs, Mom!":
+    "'Starry Ovals', Mom!":
         show mom normal at right
         Mom "Awesome, learned a new word!"
-        "stress+ \n (Lying to your mom)"
+        "stress+ \n (Pretend to understand)"
         $ pressure += 1
         jump week_1_event_2
     "I don't know mom... I didn't hear clearly":
@@ -237,24 +237,155 @@ label week_1_event_2:
     hide peter normal
     hide dad normal
 
+label check_Action_Point:
+    if current_action_points > 0:
+        jump weekend
+    else:
+        $ current_action_points = 3
+        jump course_selection_start
+
+
+
+label weekend:   
 menu:
-    "Spend time to learn the major requirement, see the hidden information, select the right courses.":
-        "Action Point - -, Study ++, Language Skill +, stress + \n 
+    "Spend time to learn the major requirement, see the hidden information.":
+        "Action Point --, Study ++, Language Skill +, stress + \n 
         (Researched and well informed, getting comfrotable reading another language)"
-        $ current_action_points -= 1
-        $ study += 2
+        $ current_action_points -= 2
+        $ study += 1
         $ language_skill += 1
         $ pressure += 1
-        jump menuintroduction
+        $ hint += 1
+        jump check_Action_Point
     "Talk with your major advisor":
-        "Action Point -, Study +, Language Skill + \n
+        "Action Point -, Study +, Language Skill ++ \n
         (Gain more insight about your major)"
-        $ current_action_points -= 1
+        $ current_action_points -= 2
         $ study += 1
-        $language_skill += 1
+        $ language_skill += 2  
+        $ hint += 3 
+        jump check_Action_Point
+    "Practice English":
+        "Action Point -, Language Skill + \n
+        (Your language has become more fluent.)"
+        $ current_action_points -= 1
+        $ pressure -= 1
+        $ language_skill += 1
+        jump check_Action_Point
+    "Go to supermarket":
+        "Action Point --, Stress -,Language Skill + \n
+        (Shopping brings you joy.)"
+        $ current_action_points -= 2
+        $ language_skill += 1
+        jump check_Action_Point
+    "Gaming at home.":
+        "Action Point --, Stress --- \n
+        (You cast your worries aside.)"
+        $ current_action_points -= 2
+        $ pressure -= 3
+        jump check_Action_Point
+# ----------- Course Select Puzzle -----------------
+default selected_courses_count = 0
+
+label course_selection_start:
+    "Time to select course"
+    "The course selection is crucial, as it will impact your grades. Please make decision carefully."
+    "Hint:"
+    if hint <= 0:
+        "You haven't investigated the major course requirements at all."
+        jump course_selection_1 
+    if hint <= 1:
+        "The Science of Superheroes"
+        jump course_selection_1 
+    if hint <= 2:
+        "The Science of Superheroes \n
+        Introduction to Creating AAA Games with Google Sheets"
+        jump course_selection_1 
+    if hint >= 3:
+        "The Science of Superheroes \n
+        Introduction to Creating AAA Games with Google Sheets \n
+        A Course That's Purely a Waste of Time"
+        jump course_selection_1 
+    
+# Question 1
+label course_selection_1:
+    if selected_courses_count >= 3:
+        "Your course selection is full. You cannot choose more courses."
         jump menuintroduction
-    "Ignore it.":
+    menu:
+        "The Science of Superheroes":
+            "You chose to take The Science of Superheroes."
+            $ selected_courses_count += 1
+            $ study += 1
+            jump course_selection_2
+        "Do not select this course":
+            "You decided not to take The Science of Superheroes."
+            jump course_selection_2
+
+# Question 2
+label course_selection_2:
+    if selected_courses_count >= 3:
+        "Your course selection is full. You cannot choose more courses."
         jump menuintroduction
+    menu:
+        "The Art of Walking":
+            "You chose to take The Art of Walking."
+            $ selected_courses_count += 1
+            $ study -= 1
+            jump course_selection_3
+        "Do not select this course":
+            "You decided not to take The Art of Walking."
+            jump course_selection_3
+
+# Question 3
+label course_selection_3:
+    if selected_courses_count >= 3:
+        "Your course selection is full. You cannot choose more courses."
+        jump menuintroduction
+    menu:
+        "The Art of Coffee Drinking":
+            "You chose to take The Art of Coffee Drinking."
+            $ selected_courses_count += 1
+            $ study -= 1
+            jump course_selection_4
+        "Do not select this course":
+            "You decided not to take The Art of Coffee Drinking."
+            jump course_selection_4
+
+# Question 4
+label course_selection_4:
+    if selected_courses_count >= 3:
+        "Your course selection is full. You cannot choose more courses."
+        jump menuintroduction
+    menu:
+        "Introduction to Creating AAA Games with Google Sheets":
+            "You chose to take Introduction to Creating AAA Games with Google Sheets."
+            $ selected_courses_count += 1
+            $ study += 1
+            jump course_selection_5
+        "Do not select this course":
+            "You decided not to take Introduction to Creating AAA Games with Google Sheets."
+            jump course_selection_5
+
+# Question 5
+label course_selection_5:
+    if selected_courses_count >= 3:
+        "Your course selection is full. You cannot choose more courses."
+        jump menuintroduction
+    menu:
+        "A Course That's Purely a Waste of Time":
+            "You chose to take A Course That's Purely a Waste of Time."
+            $ selected_courses_count += 1
+            $ study += 1
+            jump course_selection_end
+        "Do not select this course":
+            "You decided not to take A Course That's Purely a Waste of Time."
+            jump course_selection_end
+
+label course_selection_end:
+    "Course selection is finished."
+    jump menuintroduction
+
 
 label menuintroduction:
     scene background room
