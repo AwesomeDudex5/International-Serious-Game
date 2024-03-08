@@ -2,9 +2,11 @@
 errors listed below, and try again.
 
 
-File "game/screens.rpy", line 101: 'outline' is not a keyword argument or valid child of the text statement.
-    text "Pressure: [pressure] / [max_pressure]" xpos 0.1 ypos 0.1 size 30 color "#00FFFF" bold True outline (1, "#000000")
-                                                                                                            ^
+The label hosptweekent is defined twice, at File "game/labeljump.rpy", line 27:
+label hosptweekent:
+and File "game/labeljump.rpy", line 32:
+label hosptweekent:
+
 
 Ren'Py Version: Ren'Py 8.2.0.24012702
-Thu Mar  7 12:45:53 2024
+Tue Mar  5 22:53:13 2024
