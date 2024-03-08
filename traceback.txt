@@ -1,24 +1,28 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/police_cert_event.rpy", line 64, in script
-    Officer "Oh I see, I guess you mean a Cle$%^nce 2e#$er."
-ValueError: unsupported format character '^' (0x5e) at index 34
+  File "game/labeljump.rpy", line 74, in script
+    return start
+  File "game/labeljump.rpy", line 74, in <module>
+    return start
+NameError: name 'start' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/police_cert_event.rpy", line 64, in script
-    Officer "Oh I see, I guess you mean a Cle$%^nce 2e#$er."
-  File "E:\renpy-8.2.0-sdk\renpy\ast.py", line 2557, in execute
-    Say.execute(self)
-  File "E:\renpy-8.2.0-sdk\renpy\ast.py", line 615, in execute
-    renpy.exports.say(who, what, *args, **kwargs)
-  File "E:\renpy-8.2.0-sdk\renpy\exports.py", line 1482, in say
-    what = what % tag_quoting_dict
-ValueError: unsupported format character '^' (0x5e) at index 34
+  File "game/labeljump.rpy", line 74, in script
+    return start
+  File "E:\renpy-8.2.0-sdk\renpy\ast.py", line 1481, in execute
+    renpy.store._return = renpy.python.py_eval(self.expression)
+  File "E:\renpy-8.2.0-sdk\renpy\python.py", line 1209, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "E:\renpy-8.2.0-sdk\renpy\python.py", line 1202, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/labeljump.rpy", line 74, in <module>
+    return start
+NameError: name 'start' is not defined
 
 Windows-10-10.0.22621 AMD64
 Ren'Py 8.2.0.24012702
 International Serious Game 1.0
-Tue Mar  5 23:02:00 2024
+Thu Mar  7 16:23:18 2024

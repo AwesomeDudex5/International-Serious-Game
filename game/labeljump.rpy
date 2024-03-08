@@ -65,4 +65,8 @@ label weekcount:
         $ weekstransfer+=1
         jump week_7_start 
     if weekstransfer >=5:
-        jump start
+        jump GameEnd
+label GameEnd:
+    menu: 
+        "End Game":
+            $ renpy.full_restart()
