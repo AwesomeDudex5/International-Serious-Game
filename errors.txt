@@ -2,11 +2,9 @@
 errors listed below, and try again.
 
 
-The label hosptweekent is defined twice, at File "game/labeljump.rpy", line 27:
-label hosptweekent:
-and File "game/labeljump.rpy", line 32:
-label hosptweekent:
-
+File "game/labeljump.rpy", line 50: expected menuitem
+    $ renpy.full_restart()
+    ^
 
 Ren'Py Version: Ren'Py 8.2.0.24012702
-Tue Mar  5 22:53:13 2024
+Fri Mar  8 14:31:56 2024

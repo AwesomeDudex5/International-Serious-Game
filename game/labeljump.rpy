@@ -44,6 +44,12 @@ label storeweekent:
     Dad "Dad are shopping this weekend"
     jump weekcount
 
+label gameEnd: 
+    menu: 
+        "This is the End of the game, Thanks for Playing":
+            $ renpy.full_restart()
+
+
 
 label weekcount:
     if weekstransfer ==0:
@@ -64,4 +70,7 @@ label weekcount:
     if weekstransfer ==5:
         $ weekstransfer+=1
         jump week_7_start 
+    if weekstransfer >5 :
+        jump gameEnd
+
 
