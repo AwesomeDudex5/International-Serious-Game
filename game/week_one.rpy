@@ -66,7 +66,7 @@ label week_1_start:
  
     hide peter normal
     show student1 normal
-    Character("Stranger") "Oh! Go streight ah█ad, take a left, pass by @!#, then make a right, and you'll see #!, There will be a sign for Bu***g 7 right above the entrance, you can't miss it!"
+    Character("Stranger") "Oh! Go str8 ah█ad, take eleft, pass by @!#, th█n make correct, and you'll see #!, There will be a sign for Bu█*g iven coerrect 0bove the entrance, u can't mis eat!"
 
     hide student1 normal
     show peter normal

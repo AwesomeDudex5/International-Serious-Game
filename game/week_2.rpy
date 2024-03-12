@@ -78,18 +78,18 @@ label week_2_menu_1_choice_1:
 
 label week_2_menu_1_choice_2:
     show peter normal at left
-    Peter "Uhh….Hello! I'm Peter! My major is N0t Sereous? Game!"
+    Peter "Uhh….Hello! I'm Peter! My m█jor is N0t Sereous? Game!"
     jump week_2_continue_1
     
 
 label week_2_continue_1:
     show teacher normal
     if language_skill < 3:
-        Instructor "Alright, it sems bike everlione hes become acquainted. Lets bigin by getting to know more about the course. "
-        Instructor "Thre ar e total of ?x assegnments in tis semester, wth ech one tue on ph█ei. And thes week we will mainly focus on ██."
+        Instructor "Alright, it sems bike everl█one hes become acquainted. Lets bi█n by g██et█ to know more about the co█rse. "
+        Instructor "Th█e ar e t█al of ?x as██gn█ments in tis sem█ster, wth ech o█e tue on ph█ei. And thes w█ek we will main█y focus on ██."
     else:
-        Instructor "Alright, it seems like everyone has bicome acquainted. Let's begin by getting to know more about the course.  "
-        Instructor "There are a total of thkx assignments in this semester, with each one due on Fre██ t. And this week we will mainly focus on the Hem ██te TeSin."
+        Instructor "Alright, it seems like everyone has bicome ac█uai█ted. Let's begin by get█ing to k█w more ab███ the cou███e.  "
+        Instructor "Ther are a total of thkx a█ssi█nm█nts in this seme█er, with each one due on Fre██ t. And this week we will mainly focus on the Hem ██te TeSin."
     hide teacher normal
     "Classes went on for the week. Peter always made it to lectures each day."
     jump week_2_weekend
@@ -126,12 +126,15 @@ label week_2_restaurant_option:
     "(Peter walks to a local restaurant)"
 
     show random person at right
-    Character("Waiter") "Hello, just for one?"
+    if language_skill < 3:
+        Character("Waiter") "Helo, jus█ for ne?"
+    else:
+        Character("Waiter") "Hello, just for one?"
     
     show peter normal at left
     Peter "Yes."
 
-    Character("Waiter") "Okay,please have a seat, this is the menu."
+    Character("Waiter") "Okay,plea█se ha█e a s█at, this is the █enu."
 
     hide random person
     hide peter normal
@@ -151,7 +154,7 @@ menu:
 label week_2_restaurant_option_continue:
 
     show peter normal at left
-    Peter "Sorry, do you have a menu in *mother language*?"
+    Peter "Sorry, to you have a menu in *mother language*?"
     
     show random person at right
     Character("Waiter") "Of course! Let me get it for you, please wait a moment."
