@@ -1,28 +1,24 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/labeljump.rpy", line 74, in script
-    return start
-  File "game/labeljump.rpy", line 74, in <module>
-    return start
-NameError: name 'start' is not defined
+  File "game/week_4.rpy", line 90, in script
+    Instructor "There won't be class this Fri(*y, so pl*&*^&o take this time to re%iew and prepare wall."
+TypeError: %i format: a number is required, not TagQuotingDict
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/labeljump.rpy", line 74, in script
-    return start
-  File "E:\renpy-8.2.0-sdk\renpy\ast.py", line 1481, in execute
-    renpy.store._return = renpy.python.py_eval(self.expression)
-  File "E:\renpy-8.2.0-sdk\renpy\python.py", line 1209, in py_eval
-    return py_eval_bytecode(code, globals, locals)
-  File "E:\renpy-8.2.0-sdk\renpy\python.py", line 1202, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/labeljump.rpy", line 74, in <module>
-    return start
-NameError: name 'start' is not defined
+  File "game/week_4.rpy", line 90, in script
+    Instructor "There won't be class this Fri(*y, so pl*&*^&o take this time to re%iew and prepare wall."
+  File "E:\renpy-8.2.0-sdk\renpy\ast.py", line 2557, in execute
+    Say.execute(self)
+  File "E:\renpy-8.2.0-sdk\renpy\ast.py", line 615, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "E:\renpy-8.2.0-sdk\renpy\exports.py", line 1482, in say
+    what = what % tag_quoting_dict
+TypeError: %i format: a number is required, not TagQuotingDict
 
 Windows-10-10.0.22621 AMD64
 Ren'Py 8.2.0.24012702
 International Serious Game 1.0
-Thu Mar  7 16:23:18 2024
+Tue Mar 12 16:37:48 2024
