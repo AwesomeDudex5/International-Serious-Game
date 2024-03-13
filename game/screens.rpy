@@ -98,6 +98,9 @@ style frame:
 
 #show stats
 screen pressure_display():
+
+    if pressure < 0:
+        $ pressure = 0
     text "Pressure: [pressure] / [max_pressure]" xpos 0.1 ypos 0.1 size 30 color "#00FFFF" bold True
     text "Action Points: [current_action_points] / [max_action_points]" xpos 0.1 ypos 0.15 size 30 color "#00FFFF" bold True
     text "Language Skill: [language_skill] / [max_language_skill]" xpos 0.1 ypos 0.2 size 30 color "#00FFFF" bold True
