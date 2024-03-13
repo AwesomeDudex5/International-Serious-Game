@@ -2,9 +2,21 @@
 errors listed below, and try again.
 
 
-File "game/labeljump.rpy", line 50: expected menuitem
-    $ renpy.full_restart()
-    ^
+File "game/week_4.rpy", line 96: menu statement expects a non-empty block.
+    menu:
+        ^
+
+File "game/week_4.rpy", line 97: expected statement.
+    "Option 1: Talk with Instructor":
+                                    ^
+
+File "game/week_4.rpy", line 102: expected statement.
+    "Option 2: Talk with classmates":
+                                    ^
+
+File "game/week_4.rpy", line 107: expected statement.
+    "Option 3: Go home":
+                       ^
 
 Ren'Py Version: Ren'Py 8.2.0.24012702
-Fri Mar  8 14:31:56 2024
+Tue Mar 12 16:20:27 2024

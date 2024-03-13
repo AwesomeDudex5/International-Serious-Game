@@ -34,11 +34,19 @@ menu:
         jump forgot_name_0
 
 label forgot_name_1:
-    "I'm doing well, and by the way...my name is 'Alex'...you forgot that?"
+    if language_skill < 3:
+        "I'█ dong wel, nd bi the wy...my neme is 'Alex'...you for█ot that?"
+    else:
+        "I'm doing well, and by the way...my name is 'Alex'...you forgot that?"
     "The atmosphere became awkward, so you and Andy didn't say much"
+    $ pressure += 1
     jump week_3_dialogue_continue
+
 label forgot_name_0:
-    "You don't remember me? Ahh...my name is Alex."
+    if language_skill < 3:
+        "Yu don't lie██mber me? Ahh...m█ neme i█ Alex."
+    else:
+        "You don't remember me? Ahh...my name is Alex."
     "The atmosphere became awkward, so you and Andy didn't say much"
     jump week_3_dialogue_continue
 

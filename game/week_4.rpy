@@ -20,7 +20,10 @@ label week_4_wakeup:
 
 menu:
     "Wake Up":
-        jump week_4_dialogue
+        if language_skill>= 8 :
+            jump week_4_dialogue
+        else:
+            jump week_4_dialogue_Language_low
     "Slacking off at home" if pressure >= 5:
         "You've skipped all the classes, how delightful!"
         "Stress ---"
@@ -55,22 +58,58 @@ label week_4_dialogue:
     Instructor "Alright, it's about time, I hope everyone has an enjoyable weekend. "
     Instructor "Also, a reminder that next week will be #$#d@ week."
     Instructor "There won't be class this Friday, so please take this time to review and prepare well."
+    jump afterdialogue
 
-menu:
-    "Option 1: Talk with Instructor":
-        "Study ++  Stress ++ \n (Muster up courage to talk with instructor to get more information)"
-        $ pressure += 2
-        $ study += 2
-        jump week_4_menu_choice_inquire
-    "Option 2: Talk with classmates":
-        "Study +  Stress + \n (Talking with classmates can be stressful at first, but you learn more about them)"
-        $ pressure += 1
-        $ study += 1
-        jump week_4_menu_choice_inquire
-    "Option 3: Go home":
-        "Stress - - (No better place like home to rest and relax)"
-        $ pressure -= 2
-        jump week_4_menu_choice_go_home
+label week_4_dialogue_Language_low:
+    scene background school
+    
+    show teacher normal at right
+    Instructor "Good morning, everyone! Today, I will ^0&**^& you to some knowledge related to M#$5c c^$@#."
+    Instructor "I hope you can all keap up because this is crucial to *&^ topic today."
+
+    show student1 normal at left
+    Student1 "M#$5c c^$@#? What's that?"
+
+    Instructor "A M#$5c c^$@# is an important concept in game desin. Simply put, it's a specific area where players may encounter various special game rules or events."
+    Instructor "We use the term M#$5c c^$@# to describe the specific space where a game occures."
+    Instructor "This Magic cricel is sepraate from what we call 'real life' in terms of both taime and space."
+
+    hide student1 normal
+    show student2 normal at left
+    Student2 "That sounds interesting! Can you give an eaxpmle?"
+
+    Instructor "Certianly."
+
+    hide teacher normal
+    hide student2 normal
+    "(The students attend their classes for the rest of the day.)"
+    "(In several hours, the classes have come to an end for the week)"
+
+    Instructor "Alright, it's about time, I hop everywone has an enjoyable weakend. "
+    Instructor "Also, a remander thit next week will be #$#d@ week."
+    Instructor "There won't be class this Fird*y, so pl*&*^&o take this time to rioiew and prepare wall."
+    jump afterdialogue
+
+
+
+label afterdialogue:
+    menu:
+        "Option 1: Talk with Instructor":
+            "Study ++  Stress ++ \n (Muster up courage to talk with instructor to get more information)"
+            $ pressure += 2
+            $ study += 2
+            jump week_4_menu_choice_inquire
+        "Option 2: Talk with classmates":
+            "Study +  Stress + \n (Talking with classmates can be stressful at first, but you learn more about them)"
+            $ pressure += 1
+            $ study += 1
+            jump week_4_menu_choice_inquire
+        "Option 3: Go home":
+            "Stress - - (No better place like home to rest and relax)"
+            $ pressure -= 2
+            jump week_4_menu_choice_go_home
+    
+    
 
 label week_4_menu_choice_inquire:
     "(What does Peter talk about?)"
