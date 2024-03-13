@@ -13,7 +13,7 @@ label dormweekent:
 
 label policeweekent:
     scene background room
-    Dad "Why You go to plice station?"
+    Dad "Why You go to police station?"
     jump weekcount
 
 
