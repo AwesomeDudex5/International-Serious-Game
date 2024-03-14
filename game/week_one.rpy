@@ -46,7 +46,7 @@ label start:
     #For debugging, uncomment the line below with the week you want to debug
     #jump week_7_debug
     #play music "Happy.wav" loop 
-    play music "Happy.mp3"
+    #play music "audio/Happy.mp3"
     #play channelname "Happy.wav"
     jump week_1_screen_display
 
@@ -56,12 +56,29 @@ label week_1_screen_display:
     call screen week_1_screen
     jump week_1_start
 
+label audio:
+    if pressure < 5:
+        stop music
+        play music "BGM.mp3" volume 1.0     
+    else:
+        stop music
+        play music "BGM Room.mp3" volume 1.0
+
 
 #Start of the dialogue
 label week_1_start:
     scene background school
     show peter normal
     show screen pressure_display
+    #play music "BGM.mp3" volume 1.0
+
+    if pressure < 5:
+        stop music
+        play music "BGM.mp3" volume 1.0     
+    else:
+        stop music
+        play music "BGM Room.mp3" volume 1.0
+        
     Peter "Wow, this is our school, it’s soo big! It took me ages to find my dorm!" 
     Peter "I remember Andy should be around here... uhh, kinda struggling to make sense of this map."
     Peter "Hello, excuse me, how do I get to this location?"

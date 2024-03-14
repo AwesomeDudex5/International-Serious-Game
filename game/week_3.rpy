@@ -5,6 +5,12 @@ label week_3_debug:
 
 label week_3_start:
     $ current_week = 3
+    if pressure < 5:
+        stop music
+        play music "BGM.mp3" volume 1.0     
+    else:
+        stop music
+        play music "BGM Room.mp3" volume 1.0
     jump week_3_screen_display
 
 label week_3_screen_display:

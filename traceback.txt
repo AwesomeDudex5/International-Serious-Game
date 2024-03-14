@@ -1,40 +1,53 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/week_one.rpy", line 49, in script
-    play music "C:\Users\tlx11\OneDrive\Desktop\UCSC GPM Study\GAME 250\Serious Game\International-Serious-Game\game\audio"
-  File "renpy/common/000statements.rpy", line 124, in execute_play_music
-    renpy.music.play(_audio_eval(p["file"]),
-  File "renpy/common/000statements.rpy", line 33, in _audio_eval
-    return eval(expr, locals=store.audio.__dict__)
-SyntaxError: (unicode error) 'unicodeescape' codec can't decode bytes in position 2-3: truncated \UXXXXXXXX escape (game/week_one.rpy, line 49)
+  File "game/week_one.rpy", line 66, in script
+    Peter "Wow, this is our school, it’s soo big! It took me ages to find my dorm!"
+  File "renpy/common/000window.rpy", line 122, in _window_auto_callback
+    _window_show(auto=True)
+  File "renpy/common/000window.rpy", line 70, in _window_show
+    renpy.with_statement(trans)
+OSError: Couldn't find file 'game/audio/Happy.mp3'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/week_one.rpy", line 49, in script
-    play music "C:\Users\tlx11\OneDrive\Desktop\UCSC GPM Study\GAME 250\Serious Game\International-Serious-Game\game\audio"
-  File "C:\Users\tlx11\Downloads\renpy-8.2.0-sdk\renpy\ast.py", line 1968, in execute
-    self.call("execute")
-  File "C:\Users\tlx11\Downloads\renpy-8.2.0-sdk\renpy\ast.py", line 1950, in call
-    return renpy.statements.call(method, parsed, *args, **kwargs)
-  File "C:\Users\tlx11\Downloads\renpy-8.2.0-sdk\renpy\statements.py", line 349, in call
-    return method(parsed, *args, **kwargs)
-  File "renpy/common/000statements.rpy", line 124, in execute_play_music
-    renpy.music.play(_audio_eval(p["file"]),
-  File "renpy/common/000statements.rpy", line 33, in _audio_eval
-    return eval(expr, locals=store.audio.__dict__)
-  File "C:\Users\tlx11\Downloads\renpy-8.2.0-sdk\renpy\python.py", line 1207, in py_eval
-    code = py_compile(code, 'eval')
-  File "C:\Users\tlx11\Downloads\renpy-8.2.0-sdk\renpy\python.py", line 1144, in py_compile
-    raise e
-  File "C:\Users\tlx11\Downloads\renpy-8.2.0-sdk\renpy\python.py", line 1081, in py_compile
-    raise orig_e
-  File "C:\Users\tlx11\Downloads\renpy-8.2.0-sdk\renpy\python.py", line 1073, in py_compile
-    tree = compile(source, filename, py_mode, ast.PyCF_ONLY_AST | flags, 1)
-SyntaxError: (unicode error) 'unicodeescape' codec can't decode bytes in position 2-3: truncated \UXXXXXXXX escape (game/week_one.rpy, line 49)
+  File "game/week_one.rpy", line 66, in script
+    Peter "Wow, this is our school, it’s soo big! It took me ages to find my dorm!"
+  File "C:\Users\tlx11\Downloads\renpy-8.2.0-sdk\renpy\ast.py", line 2557, in execute
+    Say.execute(self)
+  File "C:\Users\tlx11\Downloads\renpy-8.2.0-sdk\renpy\ast.py", line 583, in execute
+    statement_name(stmt_name)
+  File "C:\Users\tlx11\Downloads\renpy-8.2.0-sdk\renpy\ast.py", line 52, in statement_name
+    i(name)
+  File "renpy/common/000window.rpy", line 122, in _window_auto_callback
+    _window_show(auto=True)
+  File "renpy/common/000window.rpy", line 70, in _window_show
+    renpy.with_statement(trans)
+  File "C:\Users\tlx11\Downloads\renpy-8.2.0-sdk\renpy\exports.py", line 1781, in with_statement
+    return renpy.game.interface.do_with(trans, paired, clear=clear)
+  File "C:\Users\tlx11\Downloads\renpy-8.2.0-sdk\renpy\display\core.py", line 1548, in do_with
+    return self.interact(trans_pause=True,
+  File "C:\Users\tlx11\Downloads\renpy-8.2.0-sdk\renpy\display\core.py", line 2165, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "C:\Users\tlx11\Downloads\renpy-8.2.0-sdk\renpy\display\core.py", line 3018, in interact_core
+    renpy.audio.audio.periodic()
+  File "C:\Users\tlx11\Downloads\renpy-8.2.0-sdk\renpy\audio\audio.py", line 1205, in periodic
+    raise_(exc[0], exc[1], exc[2])
+  File "lib/python3.9/future/utils/__init__.py", line 444, in raise_
+  File "C:\Users\tlx11\Downloads\renpy-8.2.0-sdk\renpy\audio\audio.py", line 1183, in periodic_thread_main
+    periodic_pass()
+  File "C:\Users\tlx11\Downloads\renpy-8.2.0-sdk\renpy\audio\audio.py", line 1125, in periodic_pass
+    c.periodic()
+  File "C:\Users\tlx11\Downloads\renpy-8.2.0-sdk\renpy\audio\audio.py", line 534, in periodic
+    topf = load(filename)
+  File "C:\Users\tlx11\Downloads\renpy-8.2.0-sdk\renpy\audio\audio.py", line 72, in load
+    rv = renpy.loader.load(fn, directory="audio")
+  File "C:\Users\tlx11\Downloads\renpy-8.2.0-sdk\renpy\loader.py", line 672, in load
+    raise IOError("Couldn't find file '%s'." % name)
+OSError: Couldn't find file 'game/audio/Happy.mp3'.
 
 Windows-10-10.0.22621 AMD64
 Ren'Py 8.2.0.24012702
 International Serious Game 1.0
-Thu Mar 14 13:40:07 2024
+Thu Mar 14 15:52:28 2024
