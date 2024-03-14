@@ -141,18 +141,20 @@ label week_4_homework_question_1:
 menu:
     "1. Mystic Castle":
         "That's not correct."
-        jump week_4_homework_question_1
+        jump week_4_homework_question_2
 
     "2. Magical World":
         "That's not correct."
-        jump week_4_homework_question_1
+        jump week_4_homework_question_2
 
     "3. Minecraft":
         "That's not correct."
-        jump week_4_homework_question_1
+        jump week_4_homework_question_2
 
     "4. Magical Circle":
         "That is correct!"
+        "Grade increase"
+        $ study += 1
         jump week_4_homework_question_2
 
 label week_4_homework_question_2:
@@ -161,19 +163,21 @@ label week_4_homework_question_2:
 menu:
     "1. Holiday":
         "That's not correct."
-        jump week_4_homework_question_2
+        jump week_4_homework_question_3
 
     "2. Spring Break":
         "That's not correct."
-        jump week_4_homework_question_2
+        jump week_4_homework_question_3
 
     "3. Midterm":
         "That is correct."
+        $ study += 1
+        "Grade increase"
         jump week_4_homework_question_3
 
     "4. Summer Break":
         "That's not correct."
-        jump week_4_homework_question_2
+        jump week_4_homework_question_3
 
 label week_4_homework_question_3:
     "Did the Instructor mention anything about this week's schedule?"
@@ -181,19 +185,21 @@ label week_4_homework_question_3:
 menu:
     "1. Classes will proceed as usual on Tuesday.":
         "That's not correct."
-        jump week_4_homework_question_3
+        jump week_4_weekend
 
     "2. No class on Wednesday":
         "That's not correct."
-        jump week_4_homework_question_3
+        jump week_4_weekend
 
     "3. No class on Friday":
         "That is correct."
+        $ study += 1
+        "Grade increase"
         jump week_4_weekend
 
     "4. Semester is over":
         "That's not correct."
-        jump week_4_homework_question_3
+        jump week_4_weekend
 
 label week_4_weekend:
     "(It is the weekend)"
@@ -202,17 +208,18 @@ label week_4_weekend:
 menu:
     "Self Study":
         "Study ++ \n (Studied for midterms)"
+        $ study += 2
 
     "Study with Andy & Alex":
         "Study +  Language + \n (Studying with friends helps one get better with the language)"
-
+        $ study += 2
     "Police certificates event":
         "(Peter decides to get certification for international students)"
         jump police_cert_event_start
 
     "Hang out with friends":
         "Stress - - \n (Spending time with friends is always a good way to relieve stress)"
-
+        $ pressure -= 3
 label week_4_end:
     "(Weekend is over)"
     jump menuintroduction
