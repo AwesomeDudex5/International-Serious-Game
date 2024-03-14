@@ -40,6 +40,7 @@ label forgot_name_1:
         "I'm doing well, and by the way...my name is 'Alex'...you forgot that?"
     "The atmosphere became awkward, so you and Andy didn't say much"
     $ pressure += 1
+    "Stress"
     jump week_3_dialogue_continue
 
 label forgot_name_0:
@@ -67,13 +68,13 @@ label week_3_dialogue:
 
 label week_3_dialogue_2nd_part:
 menu:
-    "I guess you are taking The Foundations of UX Design course right?":
+    "I gues you are taking ‘Cross-Cultural Game Communication’ cou█rse right?":
         show alex normal at right
-        Alex "Yes! That is the first core course of HCI. It seems like you still remember my major!"
+        Alex "Yes! That is the first core course of Game Linguistics. It seems like you still remember my major!"
         jump week_3_dialogue_continue
     "How was your first Sociology class?":
         show alex normal at right
-        Alex "What? Ehh… I wasn’t taking that class. I major in HCI, Human Computer Interaction. Don’t you remember?"
+        Alex "What? Ehh… I wasn’t taking that class. I major in Game Linguistics, Human Computer Interaction. Don’t you remember?"
         jump week_3_dialogue_continue
 
 
@@ -81,32 +82,42 @@ label week_3_dialogue_continue:
     scene background school
 
     show bill normal at right
-    Andy "Good Morning guys! We are going to have a day off this week! Do you have any special plans?"
-    
+    if language_skill < 3:
+        Andy "Good Moring guys! We are going do half day off this week! To you have any special plans?"
+    else:
+        Andy "Good Morning guys! We are going to have a day off this week! Do you have any special plans?"
     show peter normal at left
     Peter "What? We have a day off this week?"
     
     Andy "Yes of course, you didn’t pay attention to the campus news? Come on!"
     
-    Peter "Ehh, I was having a hard time on my assignments…So I didn’t pay attention to the Email."
-    
-    "Stress + \n(Feeling like they missed out on something important)"
+    if language_skill < 3:
+        Peter "Ehh, I wes having a had ti█e on my assignments…So I didn’t pay attention to the Email."
+    else:
+        Peter "Ehh, I was having a hard time on my assignments…So I didn’t pay attention to the Email."
+    "Stress + \n(Feeling like missed out on something important)"
     $ pressure += 1
     
     hide andy normal
     show alex normal at right
-   
-    Alex "Checking emails and staying updated with school information is crucial; it can help you not miss out on important updates."
-    Alex "If you're facing difficulties with your studies, perhaps I can assist you too?"
-    Alex "I spend my weekends studying at the library, so if you're interested, you can join me."
-   
-    Peter "That sounds great! I'll check my weekend schedule when I get back." 
-    Peter "If I have the time, I'd be more than willing to study together with you!" 
+
+    if language_skill < 3:
+        Alex "Checking mailsnd steying epda█ed with school information is cru█ial; it can help you not mistletoe on important updates."
+        Alex "Ef your facing defficulties with your stadies, perhaps I can assist you doo?"
+        Alex "I spel█d my weakends stu█ying at di leblery, soif y█ur intested, you can join me."
+        Peter "Ehh...ya! Thank you!" 
+    else:
+        Alex "Checking em█ils end staying updated with sch█ol information is crucial; it can help y█u not miss out on important updates."
+        Alex "If you're facing diffic█lties with your studies, perhaps I can assi█t you too?"
+        Alex "I sp█nd m█ weekends stud█ing at the lebrary, so if you're int█rested, you can join me."
+        Peter "That sounds great! I'll check my weekend schedule when I get back." 
+        Peter "If I have the time, I'd be more than willing to study together with you!" 
     Peter "What about you, Andy? What’s your plan for this week?"
+
    
     hide alex normal
     show bill normal at right
-    Andy "Me? I'm planning to unwind a bit this week. I'm thinking of going to the Cinema." 
+    Andy "Me? I'm planning to unw█nd a bit this week. I'm thinking of going to the Cinema." 
     Andy "However, I'm waiting to go with someone else; it's not as enjoyable alone." 
     Andy "Are you interested? If you're free, you can join as well."
    

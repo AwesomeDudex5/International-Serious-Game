@@ -205,7 +205,7 @@ menu:
 
 label week_2_homework_1_correct:
     "That's correct"
-    "study +"
+    "Grade increase"
     $ study += 1
     jump week_2_homework_2
 
@@ -227,7 +227,7 @@ menu:
 
 label week_2_homework_2_correct:
     "That's correct"
-    "study +"
+    "Grade increase"
     $ study += 1
     jump week_2_homework_3
 
@@ -249,7 +249,7 @@ menu:
 
 label week_2_homework_3_correct:
     "That's correct"
-    "study +"
+    "Grade increase"
     $ study += 1
     jump week_2_homework_4
 
@@ -272,7 +272,7 @@ menu:
 
 label week_2_homework_4_correct:
     "That's correct"
-    "study +"
+    "Grade increase"
     $ study += 1
     jump menuintroduction
 

@@ -2,9 +2,13 @@
 errors listed below, and try again.
 
 
-File "game/screens.rpy", line 103: 'pressure' is not a keyword argument or valid child of the screen statement.
-    pressure = 0
-            ^
+File "game/week_3.rpy", line 96: expected statement.
+    else：
+         ^
+
+File "game/week_3.rpy", line 109: expected statement.
+    else：
+         ^
 
 Ren'Py Version: Ren'Py 8.2.0.24012702
-Wed Mar 13 00:55:56 2024
+Thu Mar 14 11:10:00 2024

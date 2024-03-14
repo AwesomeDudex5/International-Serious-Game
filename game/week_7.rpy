@@ -26,11 +26,26 @@ label week_7_dialogue:
     "(It is the last few weeks before the semester ends)"
 
     show teacher normal
-    Instructor "Alright, today's lecture concludes here. Next, I'd like to remind everyone about the requirements for the final assignment." 
-    Instructor "This is a group project. You need to form groups and, as a team, create a bar prototype for a mobile game."
-    Instructor "For this assignment, I encourage you not to team up with friends who speak the same language or those you've teamed up with before." 
-    Instructor "This will help you socialize and collaborate with a broader range of classmates."
-
+    if language_skill < 3:
+        Instructor "Allight, 2day's le█ture concludes here. Next, I'd like to remind everyone ab█t the requirements for the final assignment." 
+        Instructor "Tis's a gloopy protract. You needle frogs from g█umps and, as a tim, crate a bardy prototype for a mobile game."
+        Instructor "Four tis a sail mint, I encoulage yo█ knot to team up with trends who spek the seme lang wedge or those you've teamed up with before." 
+        Instructor "T█is wiel help you social lies and collaborates with a boulder range of glasses mates"
+    if 3 < language_skill < 6:
+        Instructor "Alright, today's lecture concludes here. Next, I'd like to remind everyone about the requirements for the final assignment." 
+        Instructor "This is a group project. You need to form groups and, as a team, create a bar prototype for a mobile game."
+        Instructor "For this assignment, I encourage you not to team up with friends who speak the same language or those you've teamed up with before." 
+        Instructor "This will help you socialize and collaborate with a broader range of classmates."
+    if 6 < language_skill < 13:
+        Instructor "Alright, today's lecture concludes here. Next, I'd like to remind everyone about the requirements for the final assignment." 
+        Instructor "This is a group project. You need to form groups and, as a team, create a bar prototype for a mobile game."
+        Instructor "For this assignment, I encourage you not to team up with friends who speak the same language or those you've teamed up with before." 
+        Instructor "This will help you socialize and collaborate with a broader range of classmates."
+    if language_skill > 13:
+        Instructor "Alright, today's lecture concludes here. Next, I'd like to remind everyone about the requirements for the final assignment." 
+        Instructor "This is a group project. You need to form groups and, as a team, create a bar prototype for a mobile game."
+        Instructor "For this assignment, I encourage you not to team up with friends who speak the same language or those you've teamed up with before." 
+        Instructor "This will help you socialize and collaborate with a broader range of classmates."
     hide teacher normal
 
 label week_7_talk_options:
@@ -128,7 +143,41 @@ label week_7_home:
 
 label week_7_end:
     scene background week
-    "The end"
+    if study < 3:
+        "You have several courses with F."
+        "You haven't spent much time studying this semester...."
+        if language_skill < 3:
+            "You received an official email from the school."
+            "But you didn't pay much attention to it because of your poor language skills."
+            "The fact is,"
+            "This is an email from the school informing you that due to your unsatisfactory grades, you will be placed on academic probation"
+            "You were completely unaware of this and drifted through the next semester in a daze."
+            "In the end, you were expelled from the school"
+            "Bad End"
+        if language_skill > 3:
+            "You received an official email from the school."
+            "The school informs you that due to your unsatisfactory grades, you will be placed on academic probation."
+            "You began to feel anxious about the future. Your life as an international student would continue."
+            "The end"
+    if 3 < study < 6:
+        "Your overall GPA for this semester is a C" 
+        "Not good, but not terribly bad either."
+        "But if you continue in this state, you won't meet the graduation requirements."
+        "You'll continue to strive harder."
+        "The end"
+    if 6 < study < 13:
+        "Your overall GPA for this semester is a B" 
+        "Not too bad. "
+        "While it's nothing remarkable, maintaining this status should at least allow you to graduate."
+        "The end"
+    if study > 13:
+        "Your overall GPA for this semester is a A" 
+        "Well done!"
+        "Your family will be proud of you!" 
+        "The challenges faced by international students don't seem to have hindered your progress."
+        "As long as you continue to maintain this state, you will become an elite."
+        "The end"
+
 
 
 

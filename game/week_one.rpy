@@ -78,7 +78,7 @@ menu:
     "Excuse Me?": 
         jump week_1_continue
     "Ok....":
-        "pressure+ \n (Pressure from uncertainty)"
+        "(Pressure from uncertainty)"
         $ pressure += 1
         jump week_1_continue
 
@@ -172,13 +172,13 @@ label week_1_store_event:
 
 menu:
     "do you have...eggs.....without.....bacteria?": 
-        "stress+ \n (Talking to strangers while being awkward)"
+        "Pressure slightly increased \n (Talking to strangers while being awkward)"
         $ pressure += 1
         jump week_1_continue_continue
     "(Look up how to say 'Pasteurized Eggs' online.)":
         show mom normal
         Mom "Hurry up!"
-        "stress++ \n (Anxiety from time and external pressures)"
+        "Pressure increased \n (Anxiety from time and external pressures)"
         $ pressure += 2
         jump week_1_continue_continue
     "raw-eating eggs?":
@@ -211,7 +211,7 @@ menu:
     "'Starry Ovals', Mom!":
         show mom normal at right
         Mom "Awesome, learned a new word!"
-        "stress+ \n (Pretend to understand)"
+        "Pressure slightly increased \n (Pretend to understand)"
         $ pressure += 1
         jump week_1_event_2
     "I don't know mom... I didn't hear clearly":
@@ -251,7 +251,7 @@ label check_Action_Point:
 label weekend:   
 menu:
     "Spend time to learn the major requirement, see the hidden information.":
-        "Action Point --, Study ++, Language Skill +, stress + \n 
+        "Action Point --, Language Skill slightly increased, Pressure decreased! \n 
         (Researched and well informed, getting comfrotable reading another language)"
         $ current_action_points -= 2
         $ study += 1
@@ -260,7 +260,7 @@ menu:
         $ hint += 1
         jump check_Action_Point
     "Talk with your major advisor":
-        "Action Point -, Study +, Language Skill ++ \n
+        "Action Point -, Language Skill increased! \n
         (Gain more insight about your major)"
         $ current_action_points -= 2
         $ study += 1
@@ -268,13 +268,13 @@ menu:
         $ hint += 3 
         jump check_Action_Point
     "Practice English":
-        "Action Point -, Language Skill + \n
+        "Action Point -, Language Skill slightly increased \n
         (Your language has become more fluent.)"
         $ current_action_points -= 1
         $ language_skill += 1
         jump check_Action_Point
     "Go to supermarket":
-        "Action Point --, Stress -,Language Skill + \n
+        "Action Point --, Pressure slightly decreased,Language Skill slightly increased \n
         (Shopping brings you joy.)"
         $ current_action_points -= 2
         $ language_skill += 1
@@ -283,7 +283,7 @@ menu:
             $ pressure = 0
         jump check_Action_Point
     "Gaming at home.":
-        "Action Point --, Stress --- \n
+        "Action Point --, Significant decrease in pressure! \n
         (You cast your worries aside.)"
         $ current_action_points -= 2
         $ pressure -= 3
