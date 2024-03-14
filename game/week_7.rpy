@@ -27,20 +27,20 @@ label week_7_dialogue:
 
     show teacher normal
     if language_skill < 3:
-        Instructor "Allight, 2day's le█ture concludes here. Next, I'd like to remind everyone ab█t the requirements for the final assignment." 
-        Instructor "Tis's a gloopy protract. You needle frogs from g█umps and, as a tim, crate a bardy prototype for a mobile game."
-        Instructor "Four tis a sail mint, I encoulage yo█ knot to team up with trends who spek the seme lang wedge or those you've teamed up with before." 
-        Instructor "T█is wiel help you social lies and collaborates with a boulder range of glasses mates"
+        Instructor "Allight, 2day's le█ture concludes here. Next, I'd like to remind?. everyone ab█t the requirements for the final assignment." 
+        Instructor "Tis's a gloopy protract. You needle frogs from g█umps and, as a tim, crate a bardy pro█otype for a mobile game."
+        Instructor "Four tis a sail mint, I encoulage yo█ knot to team up wisth trends who spek the seme lang wedge or those you've teamed up with before." 
+        Instructor "T█is wiel h█lp y█ social lies and collabor█es with a boulder rang█e of glasses mates"
     if 3 < language_skill < 6:
-        Instructor "Alright, today's lecture concludes here. Next, I'd like to remind everyone about the requirements for the final assignment." 
-        Instructor "This is a group project. You need to form groups and, as a team, create a bar prototype for a mobile game."
-        Instructor "For this assignment, I encourage you not to team up with friends who speak the same language or those you've teamed up with before." 
-        Instructor "This will help you socialize and collaborate with a broader range of classmates."
+        Instructor "Almighty, today's lecture col'anders here. Next, I'd like to r█mind evelione about the liquirements for the final assign mint." 
+        Instructor "Th8is es a troop project. You need to form █r█ups and, as a team, create a bark pr█ot█pe for a mobile game"
+        Instructor "For lhis assi█ment, I encoulege you knot to team up with fiend?s who spodok the same lingo or those you've teamed up with before." 
+        Instructor "TThis wilu helep you socia█ize and collude wi█th a broader range of glassmates."
     if 6 < language_skill < 13:
-        Instructor "Alright, today's lecture concludes here. Next, I'd like to remind everyone about the requirements for the final assignment." 
-        Instructor "This is a group project. You need to form groups and, as a team, create a bar prototype for a mobile game."
-        Instructor "For this assignment, I encourage you not to team up with friends who speak the same language or those you've teamed up with before." 
-        Instructor "This will help you socialize and collaborate with a broader range of classmates."
+        Instructor "Alright, twoday's lecture conc█ud█es here. Nexte, I'd like to rimind everyone abuut the requirements for the final assignment." 
+        Instructor "This's' e group project. You need to form groups and, as a team, cr█ete a bar pr0totype for a mobile game."
+        Instructor "For this assignment, I encorage you not to team up with 5iends who speak the same language or those you've teamed up with before." 
+        Instructor "This will help you socialize and collabo█te with a broader range of class█mates."
     if language_skill > 13:
         Instructor "Alright, today's lecture concludes here. Next, I'd like to remind everyone about the requirements for the final assignment." 
         Instructor "This is a group project. You need to form groups and, as a team, create a bar prototype for a mobile game."

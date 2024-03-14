@@ -1,24 +1,40 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/week_one.rpy", line 297, in script
-    text "<font color='red'>Time to select course</font>"
-Exception: Sayer 'text' is not defined.
+  File "game/week_one.rpy", line 49, in script
+    play music "C:\Users\tlx11\OneDrive\Desktop\UCSC GPM Study\GAME 250\Serious Game\International-Serious-Game\game\audio"
+  File "renpy/common/000statements.rpy", line 124, in execute_play_music
+    renpy.music.play(_audio_eval(p["file"]),
+  File "renpy/common/000statements.rpy", line 33, in _audio_eval
+    return eval(expr, locals=store.audio.__dict__)
+SyntaxError: (unicode error) 'unicodeescape' codec can't decode bytes in position 2-3: truncated \UXXXXXXXX escape (game/week_one.rpy, line 49)
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/week_one.rpy", line 297, in script
-    text "<font color='red'>Time to select course</font>"
-  File "C:\Users\tlx11\Downloads\renpy-8.2.0-sdk\renpy\ast.py", line 2557, in execute
-    Say.execute(self)
-  File "C:\Users\tlx11\Downloads\renpy-8.2.0-sdk\renpy\ast.py", line 575, in execute
-    who = eval_who(self.who, self.who_fast)
-  File "C:\Users\tlx11\Downloads\renpy-8.2.0-sdk\renpy\ast.py", line 464, in eval_who
-    raise Exception("Sayer '%s' is not defined." % who)
-Exception: Sayer 'text' is not defined.
+  File "game/week_one.rpy", line 49, in script
+    play music "C:\Users\tlx11\OneDrive\Desktop\UCSC GPM Study\GAME 250\Serious Game\International-Serious-Game\game\audio"
+  File "C:\Users\tlx11\Downloads\renpy-8.2.0-sdk\renpy\ast.py", line 1968, in execute
+    self.call("execute")
+  File "C:\Users\tlx11\Downloads\renpy-8.2.0-sdk\renpy\ast.py", line 1950, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "C:\Users\tlx11\Downloads\renpy-8.2.0-sdk\renpy\statements.py", line 349, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 124, in execute_play_music
+    renpy.music.play(_audio_eval(p["file"]),
+  File "renpy/common/000statements.rpy", line 33, in _audio_eval
+    return eval(expr, locals=store.audio.__dict__)
+  File "C:\Users\tlx11\Downloads\renpy-8.2.0-sdk\renpy\python.py", line 1207, in py_eval
+    code = py_compile(code, 'eval')
+  File "C:\Users\tlx11\Downloads\renpy-8.2.0-sdk\renpy\python.py", line 1144, in py_compile
+    raise e
+  File "C:\Users\tlx11\Downloads\renpy-8.2.0-sdk\renpy\python.py", line 1081, in py_compile
+    raise orig_e
+  File "C:\Users\tlx11\Downloads\renpy-8.2.0-sdk\renpy\python.py", line 1073, in py_compile
+    tree = compile(source, filename, py_mode, ast.PyCF_ONLY_AST | flags, 1)
+SyntaxError: (unicode error) 'unicodeescape' codec can't decode bytes in position 2-3: truncated \UXXXXXXXX escape (game/week_one.rpy, line 49)
 
 Windows-10-10.0.22621 AMD64
 Ren'Py 8.2.0.24012702
 International Serious Game 1.0
-Thu Mar 14 10:08:47 2024
+Thu Mar 14 13:40:07 2024

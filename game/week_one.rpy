@@ -45,7 +45,9 @@ default hint = 0
 label start:
     #For debugging, uncomment the line below with the week you want to debug
     #jump week_7_debug
-
+    #play music "Happy.wav" loop 
+    play music "Happy.mp3"
+    #play channelname "Happy.wav"
     jump week_1_screen_display
 
 label week_1_screen_display:
