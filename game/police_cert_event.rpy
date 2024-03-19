@@ -163,6 +163,5 @@ label move_to_next_chapter:
         jump week_6_start
     elif(current_week == 6):
         jump week_7_start
-    elif(current_week == 7):
-        jump week_8_start
+
 
