@@ -34,12 +34,14 @@ default language_skill = 1
 default money = 100
 
 $ unknown_word_color = "#e71c1c" #red
+default start_police_cert = False
 default finished_police_cert = False
 default police_cert_part_1 = False
 default police_cert_part_2 = False
 
 default current_week = 1
 default hint = 0
+default weekend_map_start = False
 
 label start:
     #For debugging, uncomment the line below with the week you want to debug
@@ -417,13 +419,24 @@ label course_selection_end:
 
     else:
         "Course selection is finished."
+        $ weekend_map_start = True
         jump menuintroduction
 
 
 label menuintroduction:
     scene background room
-    show dad normal at right
-    Dad "Do you want to go out and realaxing"
-    call screen mapPopoUp
+    hide dad normal
+    hide screen mapPopoUp
+    if(weekend_map_start == True):
+        scene background room
+        show dad normal at right
+        Dad "Do you want to go out and realaxing"
+        call screen mapPopoUp
+    if(weekend_map_start == False):
+        scene background room
+        hide dad normal
+        hide screen mapPopoUp
+        jump move_to_next_chapter
+        return
 
 

@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/screens.rpy", line 439: keyword argument 'xalign' appears more than once in a vbox statement.
-    xalign 0.5
-          ^
+File "game/week_one.rpy", line 426: expected statement.
+    print("weekend_map_start:")
+                               ^
 
 Ren'Py Version: Ren'Py 8.2.0.24012702
-Mon Mar 18 00:31:51 2024
+Tue Mar 19 18:12:28 2024

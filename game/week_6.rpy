@@ -132,11 +132,6 @@ menu:
         "Stress - - \n (Going out and watching the latest movie helps destress)"
         $ pressure -= 2
         jump week_6_end
-
-    "Police certificates event":
-        "(Peter decides to get Dertification of Criminal Record from the police department)"
-        jump police_cert_event_start
-
     "Try to cook":
         "(Attempted to try new recipes)"
         "Stress - \n (Cooking is relaxing, plus good food)"
@@ -152,4 +147,5 @@ menu:
 
 label week_6_end:
     "(Weekend has ended)"
+    $ weekend_map_start = True
     jump menuintroduction

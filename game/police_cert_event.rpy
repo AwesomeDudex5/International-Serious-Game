@@ -4,6 +4,10 @@ label police_cert_event_start:
     #UNCOMMENT TO CHECK FOR DEBUG
     #"starting police cert event, check police parts and jump to right parts"
 
+    if start_police_cert == False:
+        "No reason to be here yet"
+        jump move_to_next_chapter
+
     if not police_cert_part_1:
         jump police_cert_event_part_1
     if not police_cert_part_2:
@@ -163,5 +167,9 @@ label move_to_next_chapter:
         jump week_6_start
     elif(current_week == 6):
         jump week_7_start
+    elif(current_week == 2):
+        jump week_3_start
+    elif(current_week == 1):
+        jump week_2_start
 
 

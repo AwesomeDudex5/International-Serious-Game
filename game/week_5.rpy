@@ -147,14 +147,12 @@ menu:
         "Study ++, Language + \n (Studying with friends improve language proficiency)"
         $ study += 1
         $ language_skill += 1
-    "Police certificates event":
-        "(Peter goes to the police office to get his international certification)"
-        jump police_cert_event_start
     "Hang out":
         "Stress - - \n (Hanging with friends and chilling can alleviate stress)"
         $ pressure -= 2
 
 label week_5_end:
     "(Weekend is over)"
+    $ weekend_map_start = True
     jump menuintroduction
 

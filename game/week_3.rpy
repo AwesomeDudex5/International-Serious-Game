@@ -180,6 +180,7 @@ label week_3_parent_call_option_continue:
     Dad "Make sure to get on it right away! Go inquire about it this week! We need to have that document within the next 6 weeks!"
 
 label week_3_weekend:
+    $ start_police_cert = True
     menu:
         "Cinema with Andy":
             "Stress - - \n (Spending time with friends alleviates stress)"
@@ -190,10 +191,10 @@ label week_3_weekend:
             $ pressure += 1
             $ language_skill += 1
             jump week_3_end
-        "Police certificates event" if not finished_police_cert:
-            jump police_cert_event_start
+
 
 label week_3_end:
+    $ weekend_map_start = True
     jump menuintroduction
            
 

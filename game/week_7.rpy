@@ -183,6 +183,7 @@ label week_7_end:
         "The challenges faced by international students don't seem to have hindered your progress."
         "As long as you continue to maintain this state, you will become an elite."
         "The end"
+    $ weekend_map_start = False
     $ renpy.full_restart()
 
 

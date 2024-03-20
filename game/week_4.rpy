@@ -213,15 +213,12 @@ menu:
     "Study with Andy & Alex":
         "Study +  Language + \n (Studying with friends helps one get better with the language)"
         $ study += 2
-    "Police certificates event":
-        "(Peter decides to get certification for international students)"
-        jump police_cert_event_start
-
     "Hang out with friends":
         "Stress - - \n (Spending time with friends is always a good way to relieve stress)"
         $ pressure -= 3
 label week_4_end:
     "(Weekend is over)"
+    $ weekend_map_start = True
     jump menuintroduction
 
 

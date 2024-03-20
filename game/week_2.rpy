@@ -289,4 +289,5 @@ label week_2_homework_4_incorrect:
 
 label week_2_end:
     "(Homework is finished)"
+    $ weekend_map_start = True
     jump menuintroduction

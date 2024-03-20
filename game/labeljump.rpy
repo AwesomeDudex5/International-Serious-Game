@@ -72,6 +72,7 @@ label gameEnd:
 
 
 label weekcount:
+    $ weekend_map_start = False
     if weekstransfer ==0:
         $ weekstransfer+=1
         jump week_2_start
