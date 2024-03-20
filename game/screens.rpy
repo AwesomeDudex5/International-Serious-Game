@@ -109,22 +109,19 @@ screen pressure_display():
 #First Page to show Peter's backstory
 screen peter_backstory_screen():
     text "Peter's background" xalign 0.5 yalign 0.5
+    text "Peter is an international student hailing from a distant land, unfamiliar with the culture and language of The United of Acirema. Originating from a small town, Peter has always harbored a profound curiosity for the world, brimming with aspirations to explore beyond his boundaries. Despite diligently studying Hsilgne at school, his grasp of foreign culture and language still remains limited. Living abroad, Peter frequently finds himself perplexed and isolated. Conversations with foreigners often sound like gibberish to him, leaving him feeling deeply disheartened. His daily life is fraught with challenges, hindered by his inability to communicate smoothly with others, which adds considerable pressure and frustration." xalign 0.5 yalign 0.3
+
 
 #Show Week as chapter
 screen week_1_screen():
-    frame:
-        xalign 0.5  # Adjust the x-position of the rectangle
-        yalign 0.5   # Adjust the y-position of the rectangle
-        xysize (300, 200)
-        background "#FFFFFF"  # Set the background color of the rectangle (white)
-        text "WEEK 1":
-            xalign 0.5 
-            yalign 0.3
-            color "#000000"  
-        textbutton "Start Week":
-            xalign 0.5
-            yalign 0.7
-            action Return()
+    text "WEEK 1":
+        xalign 0.5 
+        yalign 0.8
+        #color "#000000"  
+    textbutton "Start Week":
+        xalign 0.5
+        yalign 0.85
+        action Return()
                 
 screen week_2_screen():
     frame:

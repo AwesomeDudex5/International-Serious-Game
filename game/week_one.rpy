@@ -41,18 +41,18 @@ default police_cert_part_2 = False
 default current_week = 1
 default hint = 0
 
-
 label start:
     #For debugging, uncomment the line below with the week you want to debug
     #jump week_7_debug
     #play music "Happy.wav" loop 
     #play music "audio/Happy.mp3"
     #play channelname "Happy.wav"
+
     jump week_1_screen_display
 
 label week_1_screen_display:
     $ current_week = 1
-    scene background week
+    scene intro_page
     call screen week_1_screen
     jump week_1_start
 
@@ -63,7 +63,6 @@ label audio:
     else:
         stop music
         play music "BGM Room.mp3" volume 1.0
-
 
 #Start of the dialogue
 label week_1_start:
